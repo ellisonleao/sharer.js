@@ -29,6 +29,9 @@
                 case 'googleplus':
                     this.gplus();
                     break;
+                case 'linkedin':
+                    this.lkd();
+                    break;
                 default:
                     break;
             }
@@ -51,6 +54,12 @@
             var url = 'https://plus.google.com/share',
                 params = '?url='+encodeURIComponent(this.elem.getAttribute('data-url'));
             window.open(url + params, '', 'width=400,height=400,scrollbars=no');
+        },
+
+        lkd: function() {
+            var params = '?url='+encodeURIComponent(this.elem.getAttribute('data-url'))+'&mini=true',
+                url = 'https://www.linkedin.com/shareArticle';
+            window.open(url + params, '', 'width=520,height=570,scrollbars=no');
         },
 
         email: function() {
