@@ -3,7 +3,7 @@
  *
  * Tiny js lib to create a simple share component. No deps.
  * Version: 0.1.0
- * Author: Ellison Leão
+ * Author: Ellison Leao
  *
  */
 
@@ -62,14 +62,17 @@
         }
     }
 
-    var elems = document.querySelectorAll('.sharer'),
-        i,
-        l = elems.length;
+    window.addEventListener('load', function() {
+        var elems = document.querySelectorAll('.sharer'),
+            i,
+            l = elems.length;
 
-    for (i = 0; i < l ; i++) {
-        elems[i].addEventListener('click', function(){
-            var sharer = new Sharer(this);
-            sharer.share();
-        });
-    }
+        for (i = 0; i < l ; i++) {
+            elems[i].addEventListener('click', function(){
+                console.log('adding event on click');
+                var sharer = new Sharer(this);
+                sharer.share();
+            }, false);
+        }
+    });
 })(window, document);
