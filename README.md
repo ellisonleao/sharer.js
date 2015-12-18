@@ -2,7 +2,7 @@ Sharer.js
 =========
 
 Very tiny js lib (~1.6kb) to create a HTML share component on your website. No dependencies.
-Currently supporting Facebook, Twitter, Google Plus and Email Message.
+Currently supporting Facebook, Twitter, Google Plus, Linkedin and Email Message.
 
 # Usage:
 
@@ -24,11 +24,12 @@ Simply add the `sharer` class and the attributes above:
 
 ## Examples:
 
-### Facebook / Gplus:
+### Facebook / Gplus / Linkedin:
 
 ```html
 <button class="sharer" data-url="http://mywesomeurl.com" data-sharer="facebook"></button>
 <button class="sharer" data-url="http://mywesomeurl.com" data-sharer="googleplus"></button>
+<button class="sharer" data-url="http://mywesomeurl.com" data-sharer="linkedin"></button>
 ```
 
 ### Twitter:
