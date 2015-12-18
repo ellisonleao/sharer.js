@@ -24,20 +24,24 @@ Simply add the `sharer` class and the attributes above:
 
 ### Facebook / Gplus:
 
-	<button class="share" data-url="http://mywesomeurl.com" data-sharer="facebook"></button>
-	<button class="share" data-url="http://mywesomeurl.com" data-sharer="googleplus"></button>
-
+```html
+<button class="share" data-url="http://mywesomeurl.com" data-sharer="facebook"></button>
+<button class="share" data-url="http://mywesomeurl.com" data-sharer="googleplus"></button>
+```
 
 ### Twitter:
 
-	<button class="share" data-url="http://mywesomeurl.com" data-sharer="twitter" data-title="Please check my awesome URL!"></button>
+```html
+<button class="share" data-url="http://mywesomeurl.com" data-sharer="twitter" data-title="Please check my awesome URL!"></button>
+```
 
 ## Email
 
-	<button class="share"
-		data-url="http://mywesomeurl.com"
-		data-sharer="email"
-		data-title="Please check my awesome URL!"
-		data-to="someemail@test.com"
-		data-subject="Hey, check this out!"></button>
-
+```html
+<button class="share"
+	data-url="http://mywesomeurl.com"
+	data-sharer="email"
+	data-title="Please check my awesome URL!"
+	data-to="someemail@test.com"
+	data-subject="Hey, check this out!"></button>
+```
