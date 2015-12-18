@@ -8,7 +8,9 @@ Currently supporting Facebook, Twitter, Google Plus and Email Message.
 
 ## Grab the latest min version and add on your page
 
-	<script src="js/sharer.min.js"></script>
+```html
+<script src="js/sharer.min.js"></script>
+```
 
 ## Adding share behaviour to a component
 
