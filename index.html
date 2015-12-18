@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sharer.js by ellisonleao</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Sharer.js</h1>
+      <h2 class="project-tagline">Create share elements on DOM objects</h2>
+      <a href="https://github.com/ellisonleao/sharer.js" class="btn">View on GitHub</a>
+      <a href="https://github.com/ellisonleao/sharer.js/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/ellisonleao/sharer.js/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p>Sharer.js is a very tiny js lib (~1.6kb) to create share components on DOM elements for your website. Sharer.js has no dependencies.
+Currently supporting Facebook, Twitter, Google Plus and Email Message.</p>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage:</h1>
+
+<h2>
+<a id="grab-the-latest-min-version-and-add-on-your-page" class="anchor" href="#grab-the-latest-min-version-and-add-on-your-page" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grab the latest min version and add on your page</h2>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>js/sharer.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<h2>
+<a id="adding-share-behaviour-to-a-component" class="anchor" href="#adding-share-behaviour-to-a-component" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding share behaviour to a component</h2>
+
+<p>Simply add the <code>sharer</code> class and the attributes above:</p>
+
+<ul>
+<li>
+<code>data-url</code>: URL you want to share</li>
+<li>
+<code>data-title</code>: Title of the share message (twitter, email, only)</li>
+<li>
+<code>data-to</code>: Email to (Email only)</li>
+<li>
+<code>data-subject</code>: Email subject (Email only)</li>
+</ul>
+
+<h2>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples:</h2>
+
+<h3>
+<a id="facebook--gplus" class="anchor" href="#facebook--gplus" aria-hidden="true"><span class="octicon octicon-link"></span></a>Facebook / Gplus:</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">button</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>sharer<span class="pl-pds">"</span></span> <span class="pl-e">data-url</span>=<span class="pl-s"><span class="pl-pds">"</span>http://mywesomeurl.com<span class="pl-pds">"</span></span> <span class="pl-e">data-sharer</span>=<span class="pl-s"><span class="pl-pds">"</span>facebook<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">button</span>&gt;
+&lt;<span class="pl-ent">button</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>sharer<span class="pl-pds">"</span></span> <span class="pl-e">data-url</span>=<span class="pl-s"><span class="pl-pds">"</span>http://mywesomeurl.com<span class="pl-pds">"</span></span> <span class="pl-e">data-sharer</span>=<span class="pl-s"><span class="pl-pds">"</span>googleplus<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">button</span>&gt;</pre></div>
+
+<h3>
+<a id="twitter" class="anchor" href="#twitter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Twitter:</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">button</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>sharer<span class="pl-pds">"</span></span> <span class="pl-e">data-url</span>=<span class="pl-s"><span class="pl-pds">"</span>http://mywesomeurl.com<span class="pl-pds">"</span></span> <span class="pl-e">data-sharer</span>=<span class="pl-s"><span class="pl-pds">"</span>twitter<span class="pl-pds">"</span></span> <span class="pl-e">data-title</span>=<span class="pl-s"><span class="pl-pds">"</span>Please check my awesome URL!<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">button</span>&gt;</pre></div>
+
+<h2>
+<a id="email" class="anchor" href="#email" aria-hidden="true"><span class="octicon octicon-link"></span></a>Email</h2>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">button</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>sharer<span class="pl-pds">"</span></span>
+    <span class="pl-e">data-url</span>=<span class="pl-s"><span class="pl-pds">"</span>http://mywesomeurl.com<span class="pl-pds">"</span></span>
+    <span class="pl-e">data-sharer</span>=<span class="pl-s"><span class="pl-pds">"</span>email<span class="pl-pds">"</span></span>
+    <span class="pl-e">data-title</span>=<span class="pl-s"><span class="pl-pds">"</span>Please check my awesome URL!<span class="pl-pds">"</span></span>
+    <span class="pl-e">data-to</span>=<span class="pl-s"><span class="pl-pds">"</span>someemail@test.com<span class="pl-pds">"</span></span>
+    <span class="pl-e">data-subject</span>=<span class="pl-s"><span class="pl-pds">"</span>Hey, check this out!<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">button</span>&gt;</pre></div>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/ellisonleao/sharer.js">Sharer.js</a> is maintained by <a href="https://github.com/ellisonleao">ellisonleao</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
