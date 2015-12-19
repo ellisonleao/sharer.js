@@ -73,7 +73,7 @@
         },
 
         email: function() {
-            var to = this.elem.getAttribute('data-to'),
+            var to = this.elem.getAttribute('data-to') || '',
                 subject = this.elem.getAttribute('data-subject'),
                 body = subject + '\n'+ this.elem.getAttribute('data-title') + '\n' + this.elem.getAttribute('data-url'),
                 params = to + '?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
