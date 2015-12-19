@@ -25,20 +25,20 @@
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'googleplus':
-			var shareUrl = 'https://plus.google.com/share',
+                    var shareUrl = 'https://plus.google.com/share',
                         params = {
                             url: this.elem.getAttribute('data-url')
                          };
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'linkedin':
-			var shareUrl = 'https://www.linkedin.com/shareArticle',
-						params = {
+                    var shareUrl = 'https://www.linkedin.com/shareArticle',
+                        params = {
                             url: this.elem.getAttribute('data-url'),
-							mini: true
-						}
+                            mini: true
+                        }
                     this.urlSharer(shareUrl, params);
-					break;
+                    break;
                 case 'twitter':
                     this.tw();
                     break;
@@ -62,7 +62,6 @@
                 str += keys[i] + '=' + params[keys[i]];
             }
             shareUrl += str;
-			console.log('share url', shareUrl);
             window.open(shareUrl, '', 'height=400,width=400,scrollbars=no');
         },
 
@@ -89,7 +88,6 @@
 
         for (i = 0; i < l ; i++) {
             elems[i].addEventListener('click', function(){
-                console.log('adding event on click');
                 var sharer = new Sharer(this);
                 sharer.share();
             }, false);
