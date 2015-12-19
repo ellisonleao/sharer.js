@@ -18,29 +18,52 @@
             var sharer = this.elem.getAttribute('data-sharer');
             switch (sharer) {
                 case 'facebook':
-                    this.fb();
+                    var shareUrl = 'http://www.facebook.com/sharer/sharer.php',
+                        params = {
+                            u: this.elem.getAttribute('data-url')
+                         };
+                    this.urlSharer(shareUrl, params);
                     break;
+                case 'googleplus':
+			var shareUrl = 'https://plus.google.com/share',
+                        params = {
+                            url: this.elem.getAttribute('data-url')
+                         };
+                    this.urlSharer(shareUrl, params);
+                    break;
+                case 'linkedin':
+			var shareUrl = 'https://www.linkedin.com/shareArticle',
+						params = {
+                            url: this.elem.getAttribute('data-url'),
+							mini: true
+						}
+                    this.urlSharer(shareUrl, params);
+					break;
                 case 'twitter':
                     this.tw();
                     break;
                 case 'email':
                     this.email();
                     break;
-                case 'googleplus':
-                    this.gplus();
-                    break;
-                case 'linkedin':
-                    this.lkd();
-                    break;
                 default:
                     break;
             }
         },
 
-        fb: function() {
-            var url = encodeURIComponent(this.elem.getAttribute('data-url')),
-                fbSharer = 'http://www.facebook.com/sharer/sharer.php?u=' + url;
-            window.open(fbSharer, '', 'height=400,width=400,scrollbars=no');
+        urlSharer: function(shareUrl, params) {
+            var params = typeof params === 'object' ? params : {},
+                keys = Object.keys(params),
+                i,
+                str = '?';
+            for (i = 0; i < keys.length; i++) {
+                if (str !== '?') {
+                    str += '&';
+                }
+                str += keys[i] + '=' + params[keys[i]];
+            }
+            shareUrl += str;
+			console.log('share url', shareUrl);
+            window.open(shareUrl, '', 'height=400,width=400,scrollbars=no');
         },
 
        tw: function() {
@@ -48,18 +71,6 @@
                 params = '?text='+encodeURIComponent(text)+'&url='+encodeURIComponent(this.elem.getAttribute('data-url')),
                 url = 'https://twitter.com/intent/tweet/' + params;
             window.open(url, '', 'height=400,width=400,scrollbars=no');
-        },
-
-        gplus: function() {
-            var url = 'https://plus.google.com/share',
-                params = '?url='+encodeURIComponent(this.elem.getAttribute('data-url'));
-            window.open(url + params, '', 'width=400,height=400,scrollbars=no');
-        },
-
-        lkd: function() {
-            var params = '?url='+encodeURIComponent(this.elem.getAttribute('data-url'))+'&mini=true',
-                url = 'https://www.linkedin.com/shareArticle';
-            window.open(url + params, '', 'width=520,height=570,scrollbars=no');
         },
 
         email: function() {
