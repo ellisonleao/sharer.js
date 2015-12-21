@@ -16,13 +16,13 @@ Currently supporting Facebook, Twitter, Google Plus, Linkedin, WhatsApp and Emai
 
 ### Available Sharer components:
 
-- [#twitter](Twitter)
-- [#facebook](Facebook)
-- [#google-plus](Google Plus)
-- [#email](Email)
-- [#whatsapp](Whatsapp)
-- [#telegram](Telegram)
-- [#viber](Viber)
+- [Twitter](#twitter)
+- [Facebook](#facebook)
+- [Google Plus](#google-plus)
+- [Email](#email)
+- [Whatsapp](#whatsapp)
+- [Telegram](#telegram)
+- [Viber](#viber)
 
 Simply add the `sharer` class and the attributes above:
 
