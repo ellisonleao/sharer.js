@@ -2,7 +2,7 @@
  * sharer.js
  *
  * Tiny js lib to create a simple share component. No deps.
- * Version: 0.1.0
+ * Version: 0.2.0
  * Author: Ellison Leao
  *
  */
