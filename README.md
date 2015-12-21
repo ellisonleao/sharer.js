@@ -18,6 +18,7 @@ Currently supporting Facebook, Twitter, Google Plus, Linkedin, WhatsApp and Emai
 
 - [Twitter](#twitter)
 - [Facebook](#facebook)
+- [Linkedin](#linkedin)
 - [Google Plus](#google-plus)
 - [Email](#email)
 - [Whatsapp](#whatsapp)
@@ -52,6 +53,16 @@ Available Data params:
 
 ```html
 <button class="sharer" data-url="http://mywesomeurl.com" data-sharer="facebook"></button>
+```
+
+### Linkedin:
+
+Available Data params:
+
+- `data-url`
+
+```html
+<button class="sharer" data-url="http://mywesomeurl.com" data-sharer="linkedin"></button>
 ```
 
 ### Google Plus:
