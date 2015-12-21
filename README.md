@@ -1,4 +1,3 @@
-
 Sharer.js
 =========
 
@@ -15,6 +14,16 @@ Currently supporting Facebook, Twitter, Google Plus, Linkedin, WhatsApp and Emai
 
 ## Adding share behaviour to a component
 
+### Available Sharer components:
+
+- [#twitter](Twitter)
+- [#facebook](Facebook)
+- [#google-plus](Google Plus)
+- [#email](Email)
+- [#whatsapp](Whatsapp)
+- [#telegram](Telegram)
+- [#viber](Viber)
+
 Simply add the `sharer` class and the attributes above:
 
 - `data-url`: URL you want to share
@@ -23,29 +32,46 @@ Simply add the `sharer` class and the attributes above:
 - `data-subject`: Email subject (Email only)
 
 
-## Examples:
+### Twitter:
 
-### Facebook / Gplus / Linkedin:
+Available Data params:
+
+- `data-title`
+- `data-url`
+
+
+```html
+<button class="sharer" data-url="http://mywesomeurl.com" data-sharer="twitter" data-title="Checkout my awesome url!"></button>
+```
+
+### Facebook:
+
+Available Data params:
+
+- `data-url`
 
 ```html
 <button class="sharer" data-url="http://mywesomeurl.com" data-sharer="facebook"></button>
+```
+
+### Google Plus:
+
+Available Data params:
+
+- `data-url`
+
+```html
 <button class="sharer" data-url="http://mywesomeurl.com" data-sharer="googleplus"></button>
-<button class="sharer" data-url="http://mywesomeurl.com" data-sharer="linkedin"></button>
-```
-
-### Twitter:
-
-```html
-<button class="sharer" data-url="http://mywesomeurl.com" data-sharer="twitter" data-title="Please check my awesome URL!"></button>
-```
-
-### WhatsApp
-
-```html
-<button class="sharer" data-url="http://mywesomeurl.com" data-sharer="whatsapp" data-title="Please check my awesome URL!"></button>
 ```
 
 ## Email
+
+Available Data params:
+
+- `data-title`
+- `data-url`
+- `data-to`
+- `data-subject`
 
 ```html
 <button class="sharer"
@@ -54,4 +80,37 @@ Simply add the `sharer` class and the attributes above:
 	data-title="Please check my awesome URL!"
 	data-to="someemail@test.com"
 	data-subject="Hey, check this out!"></button>
+```
+
+### WhatsApp
+
+Available Data params:
+
+- `data-title`
+- `data-url`
+
+```html
+<button class="sharer" data-url="http://mywesomeurl.com" data-sharer="whatsapp" data-title="Please check my awesome URL!"></button>
+```
+
+### Telegram
+
+Available Data params:
+
+- `data-title`
+- `data-url`
+
+```html
+<button class="sharer" data-url="http://mywesomeurl.com" data-sharer="telegram" data-title="Please check my awesome URL!"></button>
+```
+
+### Viber
+
+Available Data params:
+
+- `data-title`
+- `data-url`
+
+```html
+<button class="sharer" data-url="http://mywesomeurl.com" data-sharer="viber" data-title="Please check my awesome URL!"></button>
 ```
