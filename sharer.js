@@ -14,42 +14,68 @@
     };
 
     Sharer.prototype = {
+        getValue: function(attr) {
+            var val = this.elem.getAttribute(attr);
+            return (val === undefined || val === null) ? '' : val;
+        },
+
         share: function() {
             var sharer = this.elem.getAttribute('data-sharer');
             switch (sharer) {
                 case 'facebook':
                     var shareUrl = 'http://www.facebook.com/sharer/sharer.php',
                         params = {
-                            u: this.elem.getAttribute('data-url')
+                            u: this.getValue('data-url')
                          };
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'googleplus':
                     var shareUrl = 'https://plus.google.com/share',
                         params = {
-                            url: this.elem.getAttribute('data-url')
+                            url: this.getValue('data-url')
                          };
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'linkedin':
                     var shareUrl = 'https://www.linkedin.com/shareArticle',
                         params = {
-                            url: this.elem.getAttribute('data-url'),
+                            url: this.getValue('data-url'),
                             mini: true
                         }
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'twitter':
-                    this.tw();
+                    var shareUrl = 'https://twitter.com/intent/tweet/',
+                        params = {
+                            text: this.getValue('data-title'),
+                            url: this.getValue('data-url')
+                        };
+                    this.urlSharer(shareUrl, params);
                     break;
                 case 'email':
                     this.email();
                     break;
                 case 'whatsapp':
                     var shareUrl = 'whatsapp://send',
-                        title = this.elem.getAttribute('data-title') !== null ? this.elem.getAttribute('data-title')+' ' : ''
+                        title = this.getValue('data-title'),
                         params = {
-                            text: title + this.elem.getAttribute('data-url')
+                            text: title + ' ' + this.getValue('data-url')
+                         };
+                    this.urlSharer(shareUrl, params);
+                    break;
+                case 'telegram':
+                    var shareUrl = 'tg://msg',
+                        title = this.getValue('data-title'),
+                        params = {
+                            text: title + ' ' + this.getValue('data-url')
+                         };
+                    this.urlSharer(shareUrl, params);
+                    break;
+                case 'viber':
+                    var shareUrl = 'viber://forward',
+                        title = this.getValue('data-title'),
+                        params = {
+                            text: title + ' ' + this.getValue('data-url')
                          };
                     this.urlSharer(shareUrl, params);
                     break;
@@ -67,23 +93,16 @@
                 if (str !== '?') {
                     str += '&';
                 }
-                str += keys[i] + '=' + params[keys[i]];
+                str += keys[i] + '=' + encodeURIComponent(params[keys[i]]);
             }
             shareUrl += str;
             window.open(shareUrl, '', 'height=400,width=400,scrollbars=no');
         },
 
-       tw: function() {
-            var text = this.elem.getAttribute('data-title'),
-                params = '?text='+encodeURIComponent(text)+'&url='+encodeURIComponent(this.elem.getAttribute('data-url')),
-                url = 'https://twitter.com/intent/tweet/' + params;
-            window.open(url, '', 'height=400,width=400,scrollbars=no');
-        },
-
         email: function() {
-            var to = this.elem.getAttribute('data-to') || '',
-                subject = this.elem.getAttribute('data-subject'),
-                body = subject + '\n'+ this.elem.getAttribute('data-title') + '\n' + this.elem.getAttribute('data-url'),
+            var to = this.getValue('data-to'),
+                subject = this.getValue('data-subject'),
+                body = subject + '\n'+ this.getValue('data-title') + '\n' + this.getValue('data-url'),
                 params = to + '?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
             window.location.href = "mailto:" + params;
         }
