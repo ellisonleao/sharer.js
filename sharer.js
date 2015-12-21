@@ -45,6 +45,14 @@
                 case 'email':
                     this.email();
                     break;
+                case 'whatsapp':
+                    var shareUrl = 'whatsapp://send',
+                        title = this.elem.getAttribute('data-title') !== null ? this.elem.getAttribute('data-title')+' ' : ''
+                        params = {
+                            text: title + this.elem.getAttribute('data-url')
+                         };
+                    this.urlSharer(shareUrl, params);
+                    break;
                 default:
                     break;
             }

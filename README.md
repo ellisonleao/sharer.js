@@ -3,7 +3,7 @@ Sharer.js
 =========
 
 Sharer.js is a very tiny js lib (~1.6kb) to create custom social share components on DOM elements for your website. Sharer.js has no dependencies.
-Currently supporting Facebook, Twitter, Google Plus, Linkedin and Email Message.
+Currently supporting Facebook, Twitter, Google Plus, Linkedin, WhatsApp and Email Message.
 
 # Usage:
 
@@ -18,7 +18,7 @@ Currently supporting Facebook, Twitter, Google Plus, Linkedin and Email Message.
 Simply add the `sharer` class and the attributes above:
 
 - `data-url`: URL you want to share
-- `data-title`: Title of the share message (twitter, email, only)
+- `data-title`: Title of the share message (twitter, whatsapp, email, only)
 - `data-to`: Email to (Email only)
 - `data-subject`: Email subject (Email only)
 
@@ -37,6 +37,12 @@ Simply add the `sharer` class and the attributes above:
 
 ```html
 <button class="sharer" data-url="http://mywesomeurl.com" data-sharer="twitter" data-title="Please check my awesome URL!"></button>
+```
+
+### WhatsApp
+
+```html
+<button class="sharer" data-url="http://mywesomeurl.com" data-sharer="whatsapp" data-title="Please check my awesome URL!"></button>
 ```
 
 ## Email
