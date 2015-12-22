@@ -1,8 +1,8 @@
 Sharer.js
 =========
 
-Sharer.js is a very tiny js lib (~1.6kb) to create custom social share components on DOM elements for your website. Sharer.js has no dependencies.
-Currently supporting Facebook, Twitter, Google Plus, Linkedin, WhatsApp and Email Message.
+Sharer.js is a very tiny js lib (~1.6kb) to create custom social share components on DOM elements for your website. No dependencies. Check out below which platforms we currently support.
+
 
 # Usage:
 
