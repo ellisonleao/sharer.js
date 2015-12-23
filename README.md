@@ -12,6 +12,11 @@ Sharer.js is a very tiny js lib (~1.6kb) to create custom social share component
 <script src="js/sharer.min.js"></script>
 ```
 
+## For Meteor users
+
+Just add `ellisonleao:sharerjs` on your `.meteor/packages` file
+
+
 ## Adding share behaviour to a component
 
 ### Available Sharer components:
