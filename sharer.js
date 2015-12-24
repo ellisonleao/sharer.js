@@ -2,13 +2,13 @@
  * sharer.js
  *
  * Tiny js lib to create a simple share component. No deps.
- * Version: 0.2.0
+ * Version: 0.2.1
  * Author: Ellison Leao
  *
  */
 
 ;(function (window, document) {
-    "use strict";
+    'use strict';
     var Sharer = function(elem) {
         this.elem = elem;
     };
@@ -61,15 +61,15 @@
                         params = {
                             text: title + ' ' + this.getValue('data-url')
                          };
-                    this.urlSharer(shareUrl, params);
+                    this.urlSharer(shareUrl, params, true);
                     break;
                 case 'telegram':
-                    var shareUrl = 'tg://msg',
+                    var shareUrl = 'tg://msg_url',
                         title = this.getValue('data-title'),
                         params = {
                             text: title + ' ' + this.getValue('data-url')
                          };
-                    this.urlSharer(shareUrl, params);
+                    this.urlSharer(shareUrl, params, true);
                     break;
                 case 'viber':
                     var shareUrl = 'viber://forward',
@@ -77,14 +77,14 @@
                         params = {
                             text: title + ' ' + this.getValue('data-url')
                          };
-                    this.urlSharer(shareUrl, params);
+                    this.urlSharer(shareUrl, params, true);
                     break;
                 default:
                     break;
             }
         },
 
-        urlSharer: function(shareUrl, params) {
+        urlSharer: function(shareUrl, params, isLink) {
             var params = typeof params === 'object' ? params : {},
                 keys = Object.keys(params),
                 i,
@@ -96,7 +96,12 @@
                 str += keys[i] + '=' + encodeURIComponent(params[keys[i]]);
             }
             shareUrl += str;
-            window.open(shareUrl, '', 'height=400,width=400,scrollbars=no');
+            if (!isLink) {
+                window.open(shareUrl, '', 'height=400,width=400,scrollbars=no');
+            } else {
+                console.log('shareurl', shareUrl);
+                window.location.href = shareUrl;
+            }
         },
 
         email: function() {
