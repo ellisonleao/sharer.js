@@ -6,6 +6,10 @@ Sharer.js is a very tiny js lib (~1.6kb) to create custom social share component
 
 # Installing:
 
+## Using NPM
+
+	npm install sharer.js
+
 ## Using Bower
 
 	bower install sharerjs --save
