@@ -99,7 +99,6 @@
             if (!isLink) {
                 window.open(shareUrl, '', 'height=400,width=400,scrollbars=no');
             } else {
-                console.log('shareurl', shareUrl);
                 window.location.href = shareUrl;
             }
         },
