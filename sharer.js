@@ -67,7 +67,12 @@
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'email':
-                    this.email();
+                    var to = this.getValue('data-to'),
+                        subject = this.getValue('data-subject'),
+                        body = subject + '\n'+ this.getValue('data-title') + '\n' + this.getValue('data-url'),
+                        params = to + '?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+                    window.location.href = "mailto:" + params;
+
                     break;
                 case 'whatsapp':
                     var shareUrl = 'whatsapp://send',
@@ -112,6 +117,20 @@
                          };
                     this.urlSharer(shareUrl, params);
                     break;
+                case 'hackernews':
+                    var shareUrl = 'https://news.ycombinator.com/submitlink',
+                        params = {
+                            u: this.getValue('data-url'),
+                            t: this.getValue('data-title')
+                        };
+                    this.urlSharer(shareUrl, params);
+                    break;
+                case 'reddit':
+                    var shareUrl = 'https://www.reddit.com/submit',
+                    params = {
+                        'url': this.getValue('data-url')
+                    };
+					this.urlSharer(shareUrl, params);
                 default:
                     break;
             }
@@ -141,18 +160,6 @@
                 window.location.href = shareUrl;
             }
         },
-        /**
-         * @event email
-         * @description Event to create a link to a mail client based on
-         * the data-* attributes
-         */
-        email: function() {
-            var to = this.getValue('data-to'),
-                subject = this.getValue('data-subject'),
-                body = subject + '\n'+ this.getValue('data-title') + '\n' + this.getValue('data-url'),
-                params = to + '?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-            window.location.href = "mailto:" + params;
-        }
     }
 
     /**
