@@ -130,7 +130,7 @@
                     params = {
                         'url': this.getValue('data-url')
                     };
-					this.urlSharer(shareUrl, params);
+                    this.urlSharer(shareUrl, params);
                 default:
                     break;
             }
