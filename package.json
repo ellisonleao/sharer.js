@@ -1,6 +1,6 @@
 {
   "name": "sharer.js",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Create custom social share DOM elements. No dependencies.",
   "main": "sharer.js",
   "repository": {
