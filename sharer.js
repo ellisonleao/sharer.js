@@ -93,6 +93,25 @@
                          };
                     this.urlSharer(shareUrl, params, true);
                     break;
+                case 'pinterest':
+                    var shareUrl = 'https://www.pinterest.com/pin/create/button/',
+                        params = {
+                            url: this.getValue('data-url')
+                         };
+                    this.urlSharer(shareUrl, params);
+                    break;
+                case 'tumblr':
+                    var shareUrl = 'http://tumblr.com/widgets/share/tool',
+                        params = {
+                            canonicalUrl: this.getValue('data-url'),
+                            content: this.getValue('data-url'),
+                            posttype: 'link',
+                            title: this.getValue('data-title'),
+                            caption: this.getValue('data-caption'),
+                            tags: this.getValue('data-tags')
+                         };
+                    this.urlSharer(shareUrl, params);
+                    break;
                 default:
                     break;
             }
