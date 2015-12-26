@@ -174,7 +174,7 @@
             elems[i].addEventListener('click', function(){
                 var sharer = new Sharer(this);
                 sharer.share();
-            }, false);
+            });
         }
     });
 })(window, document);
