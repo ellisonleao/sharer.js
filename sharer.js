@@ -38,7 +38,7 @@
             var shareUrl, params, title;
             switch (sharer) {
                 case 'facebook':
-                        shareUrl = 'http://www.facebook.com/sharer/sharer.php',
+                        shareUrl = 'https://www.facebook.com/sharer/sharer.php',
                         params = {
                             u: this.getValue('data-url')
                          };
