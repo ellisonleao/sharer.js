@@ -133,6 +133,14 @@
                     };
                     this.urlSharer(shareUrl, params);
                     break;
+                case 'vk':
+                    shareUrl = 'http://vk.com/share.php',
+                        params = {
+                            url: this.getValue('data-url'),
+                            title: this.getValue('data-title')
+                        };
+                    this.urlSharer(shareUrl, params);
+                    break;
                 default:
                     break;
             }
