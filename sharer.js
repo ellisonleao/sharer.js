@@ -137,7 +137,8 @@
                     shareUrl = 'http://vk.com/share.php',
                         params = {
                             url: this.getValue('data-url'),
-                            title: this.getValue('data-title')
+                            title: this.getValue('data-title'),
+                            description: this.getValue('data-caption')
                         };
                     this.urlSharer(shareUrl, params);
                     break;
