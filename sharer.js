@@ -35,31 +35,32 @@
          */
         share: function() {
             var sharer = this.elem.getAttribute('data-sharer');
+            var shareUrl, params, title;
             switch (sharer) {
                 case 'facebook':
-                    var shareUrl = 'http://www.facebook.com/sharer/sharer.php',
+                        shareUrl = 'https://www.facebook.com/sharer/sharer.php',
                         params = {
                             u: this.getValue('data-url')
                          };
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'googleplus':
-                    var shareUrl = 'https://plus.google.com/share',
+                        shareUrl = 'https://plus.google.com/share',
                         params = {
                             url: this.getValue('data-url')
                          };
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'linkedin':
-                    var shareUrl = 'https://www.linkedin.com/shareArticle',
+                        shareUrl = 'https://www.linkedin.com/shareArticle',
                         params = {
                             url: this.getValue('data-url'),
                             mini: true
-                        }
+                        };
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'twitter':
-                    var shareUrl = 'https://twitter.com/intent/tweet/',
+                        shareUrl = 'https://twitter.com/intent/tweet/',
                         params = {
                             text: this.getValue('data-title'),
                             url: this.getValue('data-url')
@@ -69,13 +70,13 @@
                 case 'email':
                     var to = this.getValue('data-to'),
                         subject = this.getValue('data-subject'),
-                        body = subject + '\n'+ this.getValue('data-title') + '\n' + this.getValue('data-url'),
+                        body = subject + '\n'+ this.getValue('data-title') + '\n' + this.getValue('data-url');
                         params = to + '?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
                     window.location.href = "mailto:" + params;
 
                     break;
                 case 'whatsapp':
-                    var shareUrl = 'whatsapp://send',
+                        shareUrl = 'whatsapp://send',
                         title = this.getValue('data-title'),
                         params = {
                             text: title + ' ' + this.getValue('data-url')
@@ -83,7 +84,7 @@
                     this.urlSharer(shareUrl, params, true);
                     break;
                 case 'telegram':
-                    var shareUrl = 'tg://msg_url',
+                        shareUrl = 'tg://msg_url',
                         title = this.getValue('data-title'),
                         params = {
                             text: title + ' ' + this.getValue('data-url')
@@ -91,7 +92,7 @@
                     this.urlSharer(shareUrl, params, true);
                     break;
                 case 'viber':
-                    var shareUrl = 'viber://forward',
+                        shareUrl = 'viber://forward',
                         title = this.getValue('data-title'),
                         params = {
                             text: title + ' ' + this.getValue('data-url')
@@ -99,14 +100,14 @@
                     this.urlSharer(shareUrl, params, true);
                     break;
                 case 'pinterest':
-                    var shareUrl = 'https://www.pinterest.com/pin/create/button/',
+                        shareUrl = 'https://www.pinterest.com/pin/create/button/',
                         params = {
                             url: this.getValue('data-url')
                          };
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'tumblr':
-                    var shareUrl = 'http://tumblr.com/widgets/share/tool',
+                        shareUrl = 'http://tumblr.com/widgets/share/tool',
                         params = {
                             canonicalUrl: this.getValue('data-url'),
                             content: this.getValue('data-url'),
@@ -118,7 +119,7 @@
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'hackernews':
-                    var shareUrl = 'https://news.ycombinator.com/submitlink',
+                        shareUrl = 'https://news.ycombinator.com/submitlink',
                         params = {
                             u: this.getValue('data-url'),
                             t: this.getValue('data-title')
@@ -126,11 +127,21 @@
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'reddit':
-                    var shareUrl = 'https://www.reddit.com/submit',
+                    shareUrl = 'https://www.reddit.com/submit',
                     params = {
                         'url': this.getValue('data-url')
                     };
                     this.urlSharer(shareUrl, params);
+                    break;
+                case 'vk':
+                    shareUrl = 'http://vk.com/share.php',
+                        params = {
+                            url: this.getValue('data-url'),
+                            title: this.getValue('data-title'),
+                            description: this.getValue('data-caption')
+                        };
+                    this.urlSharer(shareUrl, params);
+                    break;
                 default:
                     break;
             }
@@ -159,8 +170,8 @@
             } else {
                 window.location.href = shareUrl;
             }
-        },
-    }
+        }
+    };
 
     /**
      * Creates a click event on every DOM element which has the `sharer` class
