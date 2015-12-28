@@ -39,21 +39,17 @@
                 params;
             switch (sharer) {
                 case 'facebook':
-                    shareUrl = 'https://www.facebook.com/sharer/sharer.php',
-                    params = {
-                        u: this.getValue('data-url')
-                     };
+                    shareUrl = 'https://www.facebook.com/sharer/sharer.php';
+                    params = {u: this.getValue('data-url')};
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'googleplus':
-                    shareUrl = 'https://plus.google.com/share',
-                    params = {
-                        url: this.getValue('data-url')
-                     };
+                    shareUrl = 'https://plus.google.com/share';
+                    params = {url: this.getValue('data-url')};
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'linkedin':
-                    shareUrl = 'https://www.linkedin.com/shareArticle',
+                    shareUrl = 'https://www.linkedin.com/shareArticle';
                     params = {
                         url: this.getValue('data-url'),
                         mini: true
@@ -61,7 +57,7 @@
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'twitter':
-                    shareUrl = 'https://twitter.com/intent/tweet/',
+                    shareUrl = 'https://twitter.com/intent/tweet/';
                     params = {
                         text: this.getValue('data-title'),
                         url: this.getValue('data-url')
@@ -77,35 +73,31 @@
 
                     break;
                 case 'whatsapp':
-                    shareUrl = 'whatsapp://send',
+                    shareUrl = 'whatsapp://send';
                     params = {
                         text: this.getValue('data-title') + ' ' + this.getValue('data-url')
                     };
                     this.urlSharer(shareUrl, params, true);
                     break;
                 case 'telegram':
-                    shareUrl = 'tg://msg_url',
+                    shareUrl = 'tg://msg_url';
                     params = {
                         text: this.getValue('data-title') + ' ' + this.getValue('data-url')
                     };
                     this.urlSharer(shareUrl, params, true);
                     break;
                 case 'viber':
-                    shareUrl = 'viber://forward',
-                    params = {
-                        text: this.getValue('data-title') + ' ' + this.getValue('data-url')
-                    };
+                    shareUrl = 'viber://forward';
+                    params = {text: this.getValue('data-title') + ' ' + this.getValue('data-url')};
                     this.urlSharer(shareUrl, params, true);
                     break;
                 case 'pinterest':
-                    shareUrl = 'https://www.pinterest.com/pin/create/button/',
-                    params = {
-                        url: this.getValue('data-url')
-                     };
+                    shareUrl = 'https://www.pinterest.com/pin/create/button/';
+                    params = {url: this.getValue('data-url')};
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'tumblr':
-                    shareUrl = 'http://tumblr.com/widgets/share/tool',
+                    shareUrl = 'http://tumblr.com/widgets/share/tool';
                     params = {
                         canonicalUrl: this.getValue('data-url'),
                         content: this.getValue('data-url'),
@@ -117,7 +109,7 @@
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'hackernews':
-                    shareUrl = 'https://news.ycombinator.com/submitlink',
+                    shareUrl = 'https://news.ycombinator.com/submitlink';
                     params = {
                         u: this.getValue('data-url'),
                         t: this.getValue('data-title')
@@ -125,14 +117,12 @@
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'reddit':
-                    shareUrl = 'https://www.reddit.com/submit',
-                    params = {
-                        'url': this.getValue('data-url')
-                    };
+                    shareUrl = 'https://www.reddit.com/submit';
+                    params = {'url': this.getValue('data-url')};
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'vk':
-                    shareUrl = 'http://vk.com/share.php',
+                    shareUrl = 'http://vk.com/share.php';
                     params = {
                         url: this.getValue('data-url'),
                         title: this.getValue('data-title'),
@@ -152,15 +142,15 @@
          * just redirect to #shareUrl
          */
         urlSharer: function(shareUrl, params, isLink) {
-            var params = typeof params === 'object' ? params : {},
-                keys = Object.keys(params),
+            var p = typeof params === 'object' ? params : {},
+                keys = Object.keys(p),
                 i,
                 str = '?';
             for (i = 0; i < keys.length; i++) {
                 if (str !== '?') {
                     str += '&';
                 }
-                str += keys[i] + '=' + encodeURIComponent(params[keys[i]]);
+                str += keys[i] + '=' + encodeURIComponent(p[keys[i]]);
             }
             shareUrl += str;
             if (!isLink) {
@@ -179,11 +169,13 @@
             i,
             l = elems.length;
 
+        function addShare(elem) {
+            var sharer = new Sharer(elem.srcElement);
+            sharer.share();
+        }
+
         for (i = 0; i < l ; i++) {
-            elems[i].addEventListener('click', function(){
-                var sharer = new Sharer(this);
-                sharer.share();
-            });
+            elems[i].addEventListener('click', addShare);
         }
     });
 })(window, document);
