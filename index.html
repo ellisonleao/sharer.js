@@ -72,8 +72,10 @@
                     Grabbing the latest min version and adding to your page
             </h2>
             <pre><code class="language-markup">&lt;script src="path/to/sharer.min.js"&gt;&lt;/script&gt;</code></pre>
+            <p>Or you can use a CDN</p>
+            <pre><code class="language-markup">&lt;script src="https://cdn.jsdelivr.net/sharer.js/0.2.3/sharer.min.js"&gt;&lt;/script&gt;</code></pre>
 
-            <h2><a id="meteor-users" class="anchor" href="#meteor-users" aria-hidden="true">For Meteor Users:</a></h2>
+            <h2><a id="meteor-users" class="anchor" href="#meteor-users" aria-hidden="true"></a>For Meteor Users:</h2>
             <pre>meteor add ellisonleao:sharerjs</pre>
 
             <h2>
@@ -95,243 +97,257 @@
                 <li><a href="#viber">Viber</a></li>
                 <li><a href="#pinterest">Pinterest</a></li>
                 <li><a href="#tumblr">Tumblr</a></li>
+                <li><a href="#hackernews">Hackernews</a></li>
+                <li><a href="#reddit">Reddit</a></li>
+                <li><a href="#vk">VK.com</a></li>
             </ul>
 
-            <h2>
-                <a id="twitter" class="anchor" href="#twitter" aria-hidden="true"></a>Twitter:
-            </h2>
 
-            <p>Available Data attributes:</p>
+            <div class="component">
+                <h2>
+                    <a id="twitter" class="anchor" href="#twitter" aria-hidden="true"></a>Twitter:
+                </h2>
 
-            <ul>
-                <li><code>data-title</code></li>
-                <li><code>data-url</code></li>
-            </ul>
-            <pre>
-            <code class="language-markup">
-            &lt;button class="sharer button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Twitter&lt;/button&gt;
-            </code>
-            </pre>
+                <p>Available Data attributes:</p>
 
-            <p>Example:</p>
+                <ul>
+                    <li><code>data-title</code></li>
+                    <li><code>data-url</code></li>
+                </ul>
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Twitter&lt;/button&gt;</code></pre>
 
-            <button class="sharer button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Twitter</button>
+                <p>Example:</p>
 
-            <h2>
-                <a id="facebook" class="anchor" href="#facebook" aria-hidden="true"></a>Facebook:
-            </h2>
+                <button class="sharer button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Twitter</button>
+            </div>
 
-            <p>Available Data attributes:</p>
+            <div class="component">
+                <h2>
+                    <a id="facebook" class="anchor" href="#facebook" aria-hidden="true"></a>Facebook:
+                </h2>
 
-            <ul>
-                <li><code>data-url</code></li>
-            </ul>
-            <pre>
-            <code class="language-markup">
-            &lt;button class="sharer button" data-sharer="facebook" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Facebook&lt;/button&gt;
-            </code>
-            </pre>
+                <p>Available Data attributes:</p>
 
-            <p>Example:</p>
+                <ul>
+                    <li><code>data-url</code></li>
+                </ul>
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="facebook" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Facebook&lt;/button&gt;</code></pre>
 
-            <button class="sharer button" data-sharer="facebook" data-url="https://ellisonleao.github.io/sharer.js/">Share on Facebook</button>
+                <p>Example:</p>
 
+                <button class="sharer button" data-sharer="facebook" data-url="https://ellisonleao.github.io/sharer.js/">Share on Facebook</button>
+            </div>
 
-            <h2>
-                <a id="linkedin" class="anchor" href="#linkedin" aria-hidden="true"></a>Linkedin:
-            </h2>
 
-            <p>Available Data attributes:</p>
+            <div class="component">
+                <h2>
+                    <a id="linkedin" class="anchor" href="#linkedin" aria-hidden="true"></a>Linkedin:
+                </h2>
 
-            <ul>
-                <li><code>data-url</code></li>
-            </ul>
+                <p>Available Data attributes:</p>
 
-            <pre>
-            <code class="language-markup">
-            &lt;button class="sharer button" data-sharer="linkedin" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Linkedin&lt;/button&gt;
-            </code>
-            </pre>
+                <ul>
+                    <li><code>data-url</code></li>
+                </ul>
 
-            <p>Example:</p>
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="linkedin" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Linkedin&lt;/button&gt;</code></pre>
 
-            <button class="sharer button" data-sharer="linkedin" data-url="https://ellisonleao.github.io/sharer.js/">Share on Linkedin</button>
+                <p>Example:</p>
 
+                <button class="sharer button" data-sharer="linkedin" data-url="https://ellisonleao.github.io/sharer.js/">Share on Linkedin</button>
+            </div>
 
-            <h2>
-                <a id="google-plus" class="anchor" href="#google-plus" aria-hidden="true"></a>Google Plus:
-            </h2>
+            <div class="component">
+                <h2>
+                    <a id="google-plus" class="anchor" href="#google-plus" aria-hidden="true"></a>Google Plus:
+                </h2>
 
-            <p>Available Data attributes:</p>
+                <p>Available Data attributes:</p>
 
-            <ul>
-                <li><code>data-url</code></li>
-            </ul>
+                <ul>
+                    <li><code>data-url</code></li>
+                </ul>
 
-            <pre>
-            <code class="language-markup">
-            &lt;button class="sharer button" data-sharer="googleplus" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Google+&lt;/button&gt;
-            </code>
-            </pre>
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="googleplus" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Google+&lt;/button&gt;</code></pre>
 
-            <p>Example:</p>
+                <p>Example:</p>
 
-            <button class="sharer button" data-sharer="googleplus" data-url="https://ellisonleao.github.io/sharer.js/">Share on Google+</button>
+                <button class="sharer button" data-sharer="googleplus" data-url="https://ellisonleao.github.io/sharer.js/">Share on Google+</button>
+            </div>
 
 
-            <h2>
-                <a id="email" class="anchor" href="#email" aria-hidden="true"></a>Email
-            </h2>
+            <div class="component">
+                <h2>
+                    <a id="email" class="anchor" href="#email" aria-hidden="true"></a>Email
+                </h2>
 
-            <p>Available Data attributes:</p>
+                <p>Available Data attributes:</p>
 
-            <ul>
-                <li><code>data-title</code></li>
-                <li><code>data-url</code></li>
-                <li><code>data-to</code></li>
-                <li><code>data-subject</code></li>
-            </ul>
+                <ul>
+                    <li><code>data-title</code></li>
+                    <li><code>data-url</code></li>
+                    <li><code>data-to</code></li>
+                    <li><code>data-subject</code></li>
+                </ul>
 
-            <pre>
-            <code class="language-markup">
-            &lt;button class="sharer button" data-sharer="email" data-title="Awesome Url" data-url="https://ellisonleao.github.io/sharer.js/" data-subject="Hey! Check out that URL" data-to="some@email.com"&gt;Share via Email&lt;/button&gt;
-            </code>
-            </pre>
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="email" data-title="Awesome Url" data-url="https://ellisonleao.github.io/sharer.js/" data-subject="Hey! Check out that URL" data-to="some@email.com"&gt;Share via Email&lt;/button&gt;</code></pre>
 
 
-            <p>Example:</p>
+                <p>Example:</p>
 
-            <button class="sharer button" data-sharer="email" data-title="Awesome Url" data-url="https://ellisonleao.github.io/sharer.js/" data-subject="Hey! Check out that URL" data-to="some@email.com">Share via Email</button>
+                <button class="sharer button" data-sharer="email" data-title="Awesome Url" data-url="https://ellisonleao.github.io/sharer.js/" data-subject="Hey! Check out that URL" data-to="some@email.com">Share via Email</button>
+            </div>
 
 
-            <h2>
-                <a id="whatsapp" class="anchor" href="#whatsapp" aria-hidden="true"></a>WhatsApp
-            </h2>
+            <div class="component">
+                <h2>
+                    <a id="whatsapp" class="anchor" href="#whatsapp" aria-hidden="true"></a>WhatsApp
+                </h2>
 
-            <p>Available Data attributes:</p>
+                <p>Available Data attributes:</p>
 
-            <ul>
-                <li><code>data-title</code></li>
-                <li><code>data-url</code></li>
-            </ul>
+                <ul>
+                    <li><code>data-title</code></li>
+                    <li><code>data-url</code></li>
+                </ul>
 
-            <pre>
-            <code class="language-markup">
-            &lt;button class="sharer button" data-sharer="whatsapp" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Whatsapp&lt;/button&gt;
-            </code>
-            </pre>
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="whatsapp" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Whatsapp&lt;/button&gt;</code></pre>
 
-            <p>Example:</p>
+                <p>Example:</p>
 
-            <button class="sharer button" data-sharer="whatsapp" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Whatsapp</button>
+                <button class="sharer button" data-sharer="whatsapp" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Whatsapp</button>
+            </div>
 
+            <div class="component">
+                <h2>
+                    <a id="telegram" class="anchor" href="#telegram" aria-hidden="true"></a>Telegram</h2>
 
-            <h2>
-                <a id="telegram" class="anchor" href="#telegram" aria-hidden="true"></a>Telegram</h2>
+                <p>Available Data attributes:</p>
 
-            <p>Available Data attributes:</p>
+                <ul>
+                    <li><code>data-title</code></li>
+                    <li><code>data-url</code></li>
+                </ul>
 
-            <ul>
-                <li><code>data-title</code></li>
-                <li><code>data-url</code></li>
-            </ul>
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="telegram" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Telegram&lt;/button&gt;</code></pre>
 
-            <pre>
-            <code class="language-markup">
-            &lt;button class="sharer button" data-sharer="telegram" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Telegram&lt;/button&gt;
-            </code>
-            </pre>
+                <p>Example:</p>
 
-            <p>Example:</p>
+                <button class="sharer button" data-sharer="telegram" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Telegram</button>
+            </div>
 
-            <button class="sharer button" data-sharer="telegram" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Telegram</button>
+            <div class="component">
+                <h2>
+                    <a id="viber" class="anchor" href="#viber" aria-hidden="true"></a>Viber</h2>
 
-            <h2>
-                <a id="viber" class="anchor" href="#viber" aria-hidden="true"></a>Viber</h2>
+                <p>Available Data attributes:</p>
 
-            <p>Available Data attributes:</p>
+                <ul>
+                    <li><code>data-title</code></li>
+                    <li><code>data-url</code></li>
+                </ul>
 
-            <ul>
-                <li><code>data-title</code></li>
-                <li><code>data-url</code></li>
-            </ul>
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="viber" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Viber&lt;/button&gt;</code></pre>
 
-            <pre>
-            <code class="language-markup">
-            &lt;button class="sharer button" data-sharer="viber" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Viber&lt;/button&gt;
-            </code>
-            </pre>
+                <p>Example:</p>
 
-            <p>Example:</p>
+                <button class="sharer button" data-sharer="viber" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Viber</button>
+            </div>
 
-            <button class="sharer button" data-sharer="viber" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Viber</button>
+            <div class="component">
+                <h2>
+                    <a id="pinterest" class="anchor" href="#pinterest" aria-hidden="true"></a>Pinterest
+                </h2>
 
-            <h2>
-                <a id="pinterest" class="anchor" href="#pinterest" aria-hidden="true"></a>Pinterest</h2>
+                <p>Available Data attributes:</p>
 
-            <p>Available Data attributes:</p>
+                <ul>
+                    <li><code>data-url</code></li>
+                </ul>
 
-            <ul>
-                <li><code>data-url</code></li>
-            </ul>
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="pinterest" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Pinterest&lt;/button&gt;</code></pre>
 
-            <pre>
-            <code class="language-markup">
-            &lt;button class="sharer button" data-sharer="pinterest" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Pinterest&lt;/button&gt;
-            </code>
-            </pre>
+                <p>Example:</p>
 
-            <p>Example:</p>
+                <button class="sharer button" data-sharer="pinterest" data-url="https://ellisonleao.github.io/sharer.js/">Share on Pinterest</button>
+            </div>
 
-            <button class="sharer button" data-sharer="pinterest" data-url="https://ellisonleao.github.io/sharer.js/">Share on Pinterest</button>
 
+            <div class="component">
+                <h2>
+                    <a id="tumblr" class="anchor" href="#tumblr" aria-hidden="true"></a>Tumblr
+                </h2>
 
-            <h2>
-                <a id="tumblr" class="anchor" href="#tumblr" aria-hidden="true"></a>Tumblr
-            </h2>
+                <p>Available Data attributes:</p>
 
-            <p>Available Data attributes:</p>
+                <ul>
+                    <li><code>data-url</code></li>
+                    <li><code>data-title</code></li>
+                    <li><code>data-caption</code></li>
+                    <li><code>data-tags</code></li>
+                </ul>
 
-            <ul>
-                <li><code>data-url</code></li>
-                <li><code>data-title</code></li>
-                <li><code>data-caption</code></li>
-                <li><code>data-tags</code></li>
-            </ul>
+                <p>Example:</p>
 
-            <pre>
-            <code class="language-markup">
-            &lt;button class="sharer button" data-sharer="tumblr" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-tags="social,share,testing" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Tumblr&lt;/button&gt;
-            </code>
-            </pre>
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="tumblr" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-tags="social,share,testing" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Tumblr&lt;/button&gt;</code></pre>
+            </div>
 
-            <p>Example:</p>
+            <div class="component">
+                <h2>
+                    <a id="hackernews" class="anchor" href="#hackernews" aria-hidden="true"></a>Hackernews
+                </h2>
 
-            <button class="sharer button" data-sharer="tumblr" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-tags="social,share,testing" data-url="https://ellisonleao.github.io/sharer.js/">Share on Tumblr</button>
+                <p>Available Data attributes:</p>
 
+                <ul>
+                    <li><code>data-url</code></li>
+                    <li><code>data-title</code></li>
+                </ul>
 
-            <h2>
-                <a id="vk" class="anchor" href="#vk" aria-hidden="true"></a>VK
-            </h2>
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="hackernews" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Hackernews&lt;/button&gt;</code></pre>
 
-            <p>Available Data attributes:</p>
+                <p>Example:</p>
 
-            <ul>
-                <li><code>data-url</code></li>
-                <li><code>data-title</code></li>
-                <li><code>data-caption</code></li>
-            </ul>
+                <button class="sharer button" data-sharer="hackernews"  data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Hackernews</button>
+            </div>
 
-            <pre>
-            <code class="language-markup">
-                &lt;button class="sharer button" data-sharer="vk" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on VK&lt;/button&gt;
-            </code>
-            </pre>
+            <div class="component">
+                <h2>
+                    <a id="reddit" class="anchor" href="#reddit" aria-hidden="true"></a>Reddit
+                </h2>
 
-            <p>Example:</p>
+                <p>Available Data attributes:</p>
 
-            <button class="sharer button" data-sharer="vk" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on VK</button>
+                <ul>
+                    <li><code>data-url</code></li>
+                </ul>
 
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="reddit" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Reddit&lt;/button&gt;</code></pre>
+
+                <p>Example:</p>
+
+                <button class="sharer button" data-sharer="reddit" data-url="https://ellisonleao.github.io/sharer.js/">Share on Reddit</button>
+            </div>
+
+            <div class="component">
+                <h2>
+                    <a id="vk" class="anchor" href="#vk" aria-hidden="true"></a>VK
+                </h2>
+
+                <p>Available Data attributes:</p>
+
+                <ul>
+                    <li><code>data-url</code></li>
+                    <li><code>data-title</code></li>
+                    <li><code>data-caption</code></li>
+                </ul>
+
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="vk" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on VK&lt;/button&gt;</code></pre>
+
+                <p>Example:</p>
+
+                <button class="sharer button" data-sharer="vk" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on VK</button>
+            </div>
 
             <footer class="site-footer">
                 <span class="site-footer-owner"><a href="https://github.com/ellisonleao/sharer.js">Sharer.js</a> is maintained by <a href="https://github.com/ellisonleao">ellisonleao</a>.</span>

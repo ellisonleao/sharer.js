@@ -5,14 +5,15 @@
 	background-image: -ms-linear-gradient(top, #2c3e50, #e74c3c);
 	background-image: -o-linear-gradient(top, #2c3e50, #e74c3c);
 	background-image: linear-gradient(to bottom, #2c3e50, #e74c3c);
-	-webkit-border-radius: 28;
-	-moz-border-radius: 28;
-	border-radius: 28px;
+	-webkit-border-radius: 5;
+	-moz-border-radius: 5;
+	border-radius: 5px;
 	font-family: Arial;
 	color: #ffffff;
 	font-size: 20px;
 	padding: 10px 20px 10px 20px;
 	text-decoration: none;
+	width: 100%;
 }
 
 .button:hover {
@@ -26,4 +27,12 @@
   margin-bottom: 1rem;
   font-weight: normal;
   color: #2c3e50;
+}
+
+.component {
+	margin-bottom: 80px;
+	background: #f9f9f9;
+	padding: 50px;
+	border-radius: 20px;
+	box-shadow: 1px 1px 30px #cecece;
 }
