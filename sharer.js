@@ -34,37 +34,38 @@
          * based on the data-sharer attribute.
          */
         share: function() {
-            var sharer = this.elem.getAttribute('data-sharer');
-            var shareUrl, params, title;
+            var sharer = this.elem.getAttribute('data-sharer'),
+                shareUrl,
+                params;
             switch (sharer) {
                 case 'facebook':
-                        shareUrl = 'https://www.facebook.com/sharer/sharer.php',
-                        params = {
-                            u: this.getValue('data-url')
-                         };
+                    shareUrl = 'https://www.facebook.com/sharer/sharer.php',
+                    params = {
+                        u: this.getValue('data-url')
+                     };
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'googleplus':
-                        shareUrl = 'https://plus.google.com/share',
-                        params = {
-                            url: this.getValue('data-url')
-                         };
+                    shareUrl = 'https://plus.google.com/share',
+                    params = {
+                        url: this.getValue('data-url')
+                     };
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'linkedin':
-                        shareUrl = 'https://www.linkedin.com/shareArticle',
-                        params = {
-                            url: this.getValue('data-url'),
-                            mini: true
-                        };
+                    shareUrl = 'https://www.linkedin.com/shareArticle',
+                    params = {
+                        url: this.getValue('data-url'),
+                        mini: true
+                    };
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'twitter':
-                        shareUrl = 'https://twitter.com/intent/tweet/',
-                        params = {
-                            text: this.getValue('data-title'),
-                            url: this.getValue('data-url')
-                        };
+                    shareUrl = 'https://twitter.com/intent/tweet/',
+                    params = {
+                        text: this.getValue('data-title'),
+                        url: this.getValue('data-url')
+                    };
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'email':
@@ -76,54 +77,51 @@
 
                     break;
                 case 'whatsapp':
-                        shareUrl = 'whatsapp://send',
-                        title = this.getValue('data-title'),
-                        params = {
-                            text: title + ' ' + this.getValue('data-url')
-                         };
+                    shareUrl = 'whatsapp://send',
+                    params = {
+                        text: this.getValue('data-title') + ' ' + this.getValue('data-url')
+                    };
                     this.urlSharer(shareUrl, params, true);
                     break;
                 case 'telegram':
-                        shareUrl = 'tg://msg_url',
-                        title = this.getValue('data-title'),
-                        params = {
-                            text: title + ' ' + this.getValue('data-url')
-                         };
+                    shareUrl = 'tg://msg_url',
+                    params = {
+                        text: this.getValue('data-title') + ' ' + this.getValue('data-url')
+                    };
                     this.urlSharer(shareUrl, params, true);
                     break;
                 case 'viber':
-                        shareUrl = 'viber://forward',
-                        title = this.getValue('data-title'),
-                        params = {
-                            text: title + ' ' + this.getValue('data-url')
-                         };
+                    shareUrl = 'viber://forward',
+                    params = {
+                        text: this.getValue('data-title') + ' ' + this.getValue('data-url')
+                    };
                     this.urlSharer(shareUrl, params, true);
                     break;
                 case 'pinterest':
-                        shareUrl = 'https://www.pinterest.com/pin/create/button/',
-                        params = {
-                            url: this.getValue('data-url')
-                         };
+                    shareUrl = 'https://www.pinterest.com/pin/create/button/',
+                    params = {
+                        url: this.getValue('data-url')
+                     };
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'tumblr':
-                        shareUrl = 'http://tumblr.com/widgets/share/tool',
-                        params = {
-                            canonicalUrl: this.getValue('data-url'),
-                            content: this.getValue('data-url'),
-                            posttype: 'link',
-                            title: this.getValue('data-title'),
-                            caption: this.getValue('data-caption'),
-                            tags: this.getValue('data-tags')
-                         };
+                    shareUrl = 'http://tumblr.com/widgets/share/tool',
+                    params = {
+                        canonicalUrl: this.getValue('data-url'),
+                        content: this.getValue('data-url'),
+                        posttype: 'link',
+                        title: this.getValue('data-title'),
+                        caption: this.getValue('data-caption'),
+                        tags: this.getValue('data-tags')
+                    };
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'hackernews':
-                        shareUrl = 'https://news.ycombinator.com/submitlink',
-                        params = {
-                            u: this.getValue('data-url'),
-                            t: this.getValue('data-title')
-                        };
+                    shareUrl = 'https://news.ycombinator.com/submitlink',
+                    params = {
+                        u: this.getValue('data-url'),
+                        t: this.getValue('data-title')
+                    };
                     this.urlSharer(shareUrl, params);
                     break;
                 case 'reddit':
@@ -135,11 +133,11 @@
                     break;
                 case 'vk':
                     shareUrl = 'http://vk.com/share.php',
-                        params = {
-                            url: this.getValue('data-url'),
-                            title: this.getValue('data-title'),
-                            description: this.getValue('data-caption')
-                        };
+                    params = {
+                        url: this.getValue('data-url'),
+                        title: this.getValue('data-title'),
+                        description: this.getValue('data-caption')
+                    };
                     this.urlSharer(shareUrl, params);
                     break;
                 default:
