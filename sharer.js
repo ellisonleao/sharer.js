@@ -7,7 +7,7 @@
  *
  */
 
-;(function (window, document) {
+(function (window, document) {
     'use strict';
     /**
      * @constructor
@@ -134,7 +134,7 @@
                     },
                     'default': function () {}
                 };
-                return (sharers[sharer] || sharers['default'])();
+            return (sharers[sharer] || sharers['default'])();
         },
         /**
          * @event urlSharer
