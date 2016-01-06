@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/ellisonleao/sharer.js/issues"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
   "homepage": "https://ellisonleao.github.io/sharer.js/"
 }
