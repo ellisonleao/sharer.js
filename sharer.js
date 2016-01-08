@@ -136,19 +136,20 @@
                         shareUrl = 'https://www.xing.com/app/user';
                         params = {
                             'op': 'share',
-                            'url': this.getValue('data-url'),
-                            'title': this.getValue('data-title')
+                            'url': that.getValue('data-url'),
+                            'title': that.getValue('data-title')
                         };
+                        that.urlSharer(shareUrl, params);
                     },
                     'buffer': function() {
-                        shareUrl = 'http://https://buffer.com/add';
+                        shareUrl = 'https://buffer.com/add';
                         params = {
-                            url: this.getValue('data-url'),
-                            title: this.getValue('data-url'),
-                            via: this.getValue('data-twitter-username'),
-                            picture: this.getValue('data-picture')
+                            url: that.getValue('data-url'),
+                            title: that.getValue('data-url'),
+                            via: that.getValue('data-twitter-username'),
+                            picture: that.getValue('data-picture')
                         };
-                        this.urlSharer(shareUrl, params);
+                        that.urlSharer(shareUrl, params);
                     },
                     'default': function () {}
                 };
