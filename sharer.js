@@ -132,6 +132,24 @@
                         };
                         that.urlSharer(shareUrl, params);
                     },
+                    'xing': function() {
+                        shareUrl = 'https://www.xing.com/app/user';
+                        params = {
+                            'op': 'share',
+                            'url': this.getValue('data-url'),
+                            'title': this.getValue('data-title')
+                        };
+                    },
+                    'buffer': function() {
+                        shareUrl = 'http://https://buffer.com/add';
+                        params = {
+                            url: this.getValue('data-url'),
+                            title: this.getValue('data-url'),
+                            via: this.getValue('data-twitter-username'),
+                            picture: this.getValue('data-picture')
+                        };
+                        this.urlSharer(shareUrl, params);
+                    },
                     'default': function () {}
                 };
             return (sharers[sharer] || sharers['default'])();
