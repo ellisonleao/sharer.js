@@ -47,7 +47,7 @@
 
         <section class="main-content">
             <p>
-                <strong>Sharer.js</strong> is a very tiny js lib (~1.6kb) to create custom social share components on DOM elements for your website. No dependencies.
+                <strong>Sharer.js</strong> is a lightweight js lib to create custom social share components on DOM elements for your website. No dependencies.
             </p>
 
             <h1>
@@ -100,8 +100,11 @@
                 <li><a href="#hackernews">Hackernews</a></li>
                 <li><a href="#reddit">Reddit</a></li>
                 <li><a href="#vk">VK.com</a></li>
+                <li><a href="#buffer">Buffer</a></li>
+                <li><a href="#xing">Xing</a></li>
             </ul>
-
+            <br/>
+            <br/>
 
             <div class="component">
                 <h2>
@@ -348,6 +351,46 @@
                 <p>Example:</p>
 
                 <button class="sharer button" data-sharer="vk" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on VK</button>
+            </div>
+
+	    <div class="component">
+                <h2>
+		    <a id="buffer" class="anchor" href="#buffer" aria-hidden="true"></a>Buffer
+                </h2>
+
+                <p>Available Data attributes:</p>
+
+                <ul>
+                    <li><code>data-url</code></li>
+                    <li><code>data-title</code></li>
+		    <li><code>data-twitter-username</code></li>
+		    <li><code>data-picture</code> (If picture url is set, the link meta be replaced)</li>
+                </ul>
+
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="buffer" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Buffer&lt;/button&gt;</code></pre>
+
+                <p>Example:</p>
+
+                <button class="sharer button" data-sharer="buffer" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/">Share on Buffer</button>
+            </div>
+
+	    <div class="component">
+                <h2>
+		    <a id="xing" class="anchor" href="#xing" aria-hidden="true"></a>Xing
+                </h2>
+
+                <p>Available Data attributes:</p>
+
+                <ul>
+                    <li><code>data-url</code></li>
+                    <li><code>data-title</code></li>
+                </ul>
+
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="xing" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Xing&lt;/button&gt;</code></pre>
+
+                <p>Example:</p>
+
+                <button class="sharer button" data-sharer="xing" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/">Share on Xing</button>
             </div>
 
             <footer class="site-footer">
