@@ -93,6 +93,11 @@
                         params = {text: that.getValue('data-title') + ' ' + that.getValue('data-url')};
                         that.urlSharer(shareUrl, params, true);
                     },
+                    'line': function () {
+                        var text = that.getValue('data-title') + ' ' + that.getValue('data-url');
+                        shareUrl = 'http://line.me/R/msg/text/?' + encodeURIComponent(text);
+                        that.urlSharer(shareUrl, {}, true);
+                    },
                     'pinterest': function () {
                         shareUrl = 'https://www.pinterest.com/pin/create/button/';
                         params = {url: that.getValue('data-url')};
@@ -166,7 +171,7 @@
             var p = typeof params === 'object' ? params : {},
                 keys = Object.keys(p),
                 i,
-                str = '?';
+                str = keys.length > 0 ? '?' : '';
             for (i = 0; i < keys.length; i++) {
                 if (str !== '?') {
                     str += '&';
