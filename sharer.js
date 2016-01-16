@@ -94,9 +94,9 @@
                         that.urlSharer(shareUrl, params, true);
                     },
                     'line': function () {
-                        shareUrl = 'http://line.me/R/msg/text/';
-                        params = that.getValue('data-title') + ' ' + that.getValue('data-url');
-                        that.urlSharer(shareUrl, params, true);
+                        var text = that.getValue('data-title') + ' ' + that.getValue('data-url');
+                        shareUrl = 'http://line.me/R/msg/text/?' + encodeURIComponent(text);
+                        that.urlSharer(shareUrl, {}, true);
                     },
                     'pinterest': function () {
                         shareUrl = 'https://www.pinterest.com/pin/create/button/';
@@ -161,35 +161,24 @@
             return (sharers[sharer] || sharers['default'])();
         },
         /**
-         * @function formatUrl
-         * @param {String} baseUrl
-         * @param {Object|String} params
+         * @event urlSharer
+         * @param {String} shareUrl
+         * @param {Object} params
+         * @param {Boolean} isLink - refers is the event will pop a new window or
+         * just redirect to #shareUrl
          */
-        formatUrl: function(baseUrl, params) {
-            if (!params) return baseUrl;
-            if (typeof params === 'string') return baseUrl + '?' + encodeURIComponent(params);
-
+        urlSharer: function(shareUrl, params, isLink) {
             var p = typeof params === 'object' ? params : {},
                 keys = Object.keys(p),
                 i,
-                str = '?';
+                str = keys.length > 0 ? '?' : '';
             for (i = 0; i < keys.length; i++) {
                 if (str !== '?') {
                     str += '&';
                 }
                 str += keys[i] + '=' + encodeURIComponent(p[keys[i]]);
             }
-            return baseUrl + str;
-        },
-        /**
-         * @event urlSharer
-         * @param {String} baseUrl
-         * @param {Object|String} params
-         * @param {Boolean} isLink - refers is the event will pop a new window or
-         * just redirect to #shareUrl
-         */
-        urlSharer: function(baseUrl, params, isLink) {
-            var shareUrl = this.formatUrl(baseUrl, params)
+            shareUrl += str;
             if (!isLink) {
                 window.open(shareUrl, '', 'height=400,width=400,scrollbars=no');
             } else {
