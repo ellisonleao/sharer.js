@@ -61,7 +61,9 @@
                         shareUrl = 'https://twitter.com/intent/tweet/';
                         params = {
                             text: that.getValue('data-title'),
-                            url: that.getValue('data-url')
+                            url: that.getValue('data-url'),
+                            via: that.getValue('data-via'),
+                            hashtags: that.getValue('data-hashtags')
                         };
                         that.urlSharer(shareUrl, params);
                     },
