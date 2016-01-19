@@ -1,19 +1,91 @@
-.button {
-	background: #2c3e50;
-	background-image: -webkit-linear-gradient(top, #2c3e50, #e74c3c);
-	background-image: -moz-linear-gradient(top, #2c3e50, #e74c3c);
-	background-image: -ms-linear-gradient(top, #2c3e50, #e74c3c);
-	background-image: -o-linear-gradient(top, #2c3e50, #e74c3c);
-	background-image: linear-gradient(to bottom, #2c3e50, #e74c3c);
-	-webkit-border-radius: 5;
-	-moz-border-radius: 5;
-	border-radius: 5px;
-	font-family: Arial;
-	color: #ffffff;
-	font-size: 20px;
-	padding: 10px 20px 10px 20px;
-	text-decoration: none;
-	width: 100%;
+button {
+  background-color: #aaa;
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 2px 0 #888, 1px 4px 2px rgba(0,0,0,0.2);
+  color: white;
+  display: block;
+  font-family: sans-serif;
+  font-size: .85em;
+  font-weight: 300;
+  outline: none;
+  padding: 1em 0;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  width: 100%;
+}
+
+button[data-sharer="twitter"] {
+  background-color: #00aced;
+  box-shadow: 0 2px 0 #0084b4, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="facebook"] {
+  background-color: #3b5998;
+  box-shadow: 0 2px 0 #224389, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="linkedin"] {
+  background-color: #007AB5;
+  box-shadow: 0 2px 0 #005E8C, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="googleplus"] {
+  background-color: #DD4C39;
+  box-shadow: 0 2px 0 #BB2D1A, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="email"] {
+  background-color: #444;
+  box-shadow: 0 2px 0 #222, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="whatsapp"] {
+  background-color: #4DC247;
+  box-shadow: 0 2px 0 #30AF29, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="telegram"] {
+  background-color: #34ADE1;
+  box-shadow: 0 2px 0 #0E9BD8, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="viber"] {
+  background-color: #7C529E;
+  box-shadow: 0 2px 0 #5F3485, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="pinterest"] {
+  background-color: #CB2029;
+  box-shadow: 0 2px 0 #A30E15, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="tumblr"] {
+  background-color: #32506d;
+  box-shadow: 0 2px 0 #1F3C59, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="hackernews"] {
+  background-color: #FF6700;
+  box-shadow: 0 2px 0 #C65000, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="reddit"] {
+  background-color: #CEE3F8;
+  box-shadow: 0 2px 0 #A2C6E8, 1px 4px 2px rgba(0,0,0,0.2);
+  color: #335f89;
+}
+button[data-sharer="vk"] {
+  background-color: #45668E;
+  box-shadow: 0 2px 0 #2B4E77, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="buffer"] {
+  background-color: #46ABED;
+  box-shadow: 0 2px 0 #2198E5, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="xing"] {
+  background-color: #006464;
+  box-shadow: 0 2px 0 #135353, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="line"] {
+  background-color: #1DCD00;
+  box-shadow: 0 2px 0 #1DCD00, 1px 4px 2px rgba(0,0,0,0.2);
+}
+
+
+button:active {
+  box-shadow: 0 0 0 transparent;
+  transform: translateY(2px);
 }
 
 .button:hover {

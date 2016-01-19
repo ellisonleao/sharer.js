@@ -73,7 +73,7 @@
             </h2>
             <pre><code class="language-markup">&lt;script src="path/to/sharer.min.js"&gt;&lt;/script&gt;</code></pre>
             <p>Or you can use a CDN</p>
-            <pre><code class="language-markup">&lt;script src="https://cdn.jsdelivr.net/sharer.js/0.2.5/sharer.min.js"&gt;&lt;/script&gt;</code></pre>
+            <pre><code class="language-markup">&lt;script src="https://cdn.jsdelivr.net/sharer.js/latest/sharer.min.js"&gt;&lt;/script&gt;</code></pre>
 
             <h2><a id="meteor-users" class="anchor" href="#meteor-users" aria-hidden="true"></a>For Meteor Users:</h2>
             <pre>meteor add ellisonleao:sharerjs</pre>
@@ -102,6 +102,7 @@
                 <li><a href="#vk">VK.com</a></li>
                 <li><a href="#buffer">Buffer</a></li>
                 <li><a href="#xing">Xing</a></li>
+                <li><a href="#line">Line</a></li>
             </ul>
             <br/>
             <br/>
@@ -116,12 +117,14 @@
                 <ul>
                     <li><code>data-title</code></li>
                     <li><code>data-url</code></li>
+                    <li><code>data-via</code> (twitter username without @)</li>
+                    <li><code>data-hashtags</code> (comma separated hashtags)</li>
                 </ul>
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Twitter&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-via="ellisonleao" data-hashtags="awesome, sharer.js" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Twitter&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Twitter</button>
+                <button class="sharer button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-via="ellisonleao" data-hashtags="awesome, sharer.js" data-url="https://ellisonleao.github.io/sharer.js/">Share on Twitter</button>
             </div>
 
             <div class="component">
@@ -393,13 +396,32 @@
                 <button class="sharer button" data-sharer="xing" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/">Share on Xing</button>
             </div>
 
+	    <div class="component">
+                <h2>
+		    <a id="line" class="anchor" href="#line" aria-hidden="true"></a>Line
+                </h2>
+
+                <p>Available Data attributes:</p>
+
+                <ul>
+                    <li><code>data-url</code></li>
+                    <li><code>data-title</code></li>
+                </ul>
+
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="line" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Line&lt;/button&gt;</code></pre>
+
+                <p>Example:</p>
+
+                <button class="sharer button" data-sharer="line" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/">Share on Line</button>
+            </div>
+
             <footer class="site-footer">
                 <span class="site-footer-owner"><a href="https://github.com/ellisonleao/sharer.js">Sharer.js</a> is maintained by <a href="https://github.com/ellisonleao">ellisonleao</a>.</span>
 
             </footer>
 
         </section>
-        <script src="https://cdn.jsdelivr.net/sharer.js/0.2.5/sharer.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/sharer.js/latest/sharer.min.js"></script>
         <script src="js/prism.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
