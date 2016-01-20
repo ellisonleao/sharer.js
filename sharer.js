@@ -158,6 +158,37 @@
                         };
                         that.urlSharer(shareUrl, params);
                     },
+                    'instapaper': function() {
+                        var text = that.getValue('data-title') + ' ' + that.getValue('data-url');
+                        shareUrl = 'http://www.instapaper.com/text';
+                        params = {
+                            u: text
+                        };
+                        that.urlSharer(shareUrl, params, true);
+                    },
+                    'pocket': function() {
+                        shareUrl = 'https://getpocket.com/save';
+                        params = {
+                            url: that.getValue('data-url'),
+                            title: that.getValue('data-title')
+                        };
+                        that.urlSharer(shareUrl, params);
+                    },
+                    'digg': function() {
+                        shareUrl = 'http://www.digg.com/submit';
+                        params = {
+                            url: that.getValue('data-url')
+                        };
+                        that.urlSharer(shareUrl, params);
+                    },
+                    'stumbleupon': function() {
+                        shareUrl = 'http://www.stumbleupon.com/submit';
+                        params = {
+                            url: that.getValue('data-url'),
+                            title: that.getValue('data-title')
+                        };
+                        that.urlSharer(shareUrl, params);
+                    },
                     'default': function () {}
                 };
             return (sharers[sharer] || sharers['default'])();
