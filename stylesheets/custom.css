@@ -81,14 +81,21 @@ button[data-sharer="line"] {
   background-color: #1DCD00;
   box-shadow: 0 2px 0 #1DCD00, 1px 4px 2px rgba(0,0,0,0.2);
 }
-
+button[data-sharer="digg"] {
+  background-color: #1B568E;
+  box-shadow: 0 2px 0 #1B568E, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="pocket"] {
+  background-color: #EE4056;
+  box-shadow: 0 2px 0 #EE4056, 1px 4px 2px rgba(0,0,0,0.2);
+}
 
 button:active {
   box-shadow: 0 0 0 transparent;
   transform: translateY(2px);
 }
 
-.button:hover {
+button:hover {
 	text-decoration: none;
 	transition: all .2s ease-in-out;
 	transform: scale(1.1);
