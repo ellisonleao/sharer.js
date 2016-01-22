@@ -7,5 +7,5 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-    api.addFiles(['sharer.min.js'], 'client');
+    api.addFiles(['sharer.js'], 'client');
 });
