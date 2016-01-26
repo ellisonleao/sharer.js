@@ -22,16 +22,16 @@
         <meta property="og:site_name" content="Share.js">
         <meta property="og:image" content="https://ellisonleao.github.io/sharer.js/img/socialbg.png">
         <meta property="og:image:type" content="image/png">
-        <meta property="og:image:width" content="517">
-        <meta property="og:image:height" content="162">
+        <meta property="og:image:width" content="1291">
+        <meta property="og:image:height" content="315">
 
         <meta property="twitter:creator" content="ellisonleao">
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:title" content="Sharer.js">
         <meta property="twitter:description" content="Create social share elements on DOM objects">
         <meta property="twitter:image:src" content="https://ellisonleao.github.io/sharer.js/img/socialbg.png">
-        <meta property="twitter:image:width" content="517">
-        <meta property="twitter:image:height" content="162">
+        <meta property="twitter:image:width" content="1291">
+        <meta property="twitter:image:height" content="315">
     </head>
     <body>
         <section class="page-header">
@@ -121,8 +121,8 @@
                 <ul>
                     <li><code>data-title</code></li>
                     <li><code>data-url</code></li>
-                    <li><code>data-via</code> (twitter username without @)</li>
-                    <li><code>data-hashtags</code> (comma separated hashtags)</li>
+                    <li><code>data-via</code> (optional: twitter username without @)</li>
+                    <li><code>data-hashtags</code> (optional: comma separated hashtags)</li>
                 </ul>
                 <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-via="ellisonleao" data-hashtags="awesome, sharer.js" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Twitter&lt;/button&gt;</code></pre>
 
@@ -293,8 +293,8 @@
                 <ul>
                     <li><code>data-url</code></li>
                     <li><code>data-title</code></li>
-                    <li><code>data-caption</code></li>
-                    <li><code>data-tags</code></li>
+                    <li><code>data-caption</code> (optional)</li>
+                    <li><code>data-tags</code> (optional: comma separated tags)</li>
                 </ul>
 
                 <p>Example:</p>
@@ -350,7 +350,7 @@
                 <ul>
                     <li><code>data-url</code></li>
                     <li><code>data-title</code></li>
-                    <li><code>data-caption</code></li>
+                    <li><code>data-caption</code> (optional)</li>
                 </ul>
 
                 <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="vk" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on VK&lt;/button&gt;</code></pre>
@@ -501,7 +501,7 @@
             </footer>
 
         </section>
-        <script src="https://cdn.jsdelivr.net/sharer.js/latest/sharer.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/sharer.js/0.2.8/sharer.min.js"></script>
         <script src="js/prism.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
