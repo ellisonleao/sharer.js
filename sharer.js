@@ -26,7 +26,7 @@
          *  @returns {String|Empty} returns the attr value or empty string
          */
         getValue: function(attr) {
-            var val = this.elem.getAttribute(attr);
+            var val = this.elem.getAttribute('data-' + attr);
             return (val === undefined || val === null) ? '' : val;
         },
 
@@ -36,108 +36,113 @@
          * based on the data-sharer attribute.
          */
         share: function() {
-            var sharer = this.elem.getAttribute('data-sharer'),
+            var sharer = this.getValue('sharer'),
                 that = this,
                 shareUrl,
                 params,
                 sharers = {
                     'facebook': function () {
                         shareUrl = 'https://www.facebook.com/sharer/sharer.php';
-                        params = {u: that.getValue('data-url')};
+                        params = {u: that.getValue('url')};
                         that.urlSharer(shareUrl, params);
                     },
                     'googleplus': function () {
                         shareUrl = 'https://plus.google.com/share';
-                        params = {url: that.getValue('data-url')};
+                        params = {url: that.getValue('url')};
                         that.urlSharer(shareUrl, params);
                     },
                     'linkedin': function () {
                         shareUrl = 'https://www.linkedin.com/shareArticle';
                         params = {
-                            url: that.getValue('data-url'),
+                            url: that.getValue('url'),
                             mini: true
                         };
                         that.urlSharer(shareUrl, params);
                     },
                     'twitter': function () {
+                        var via = that.getValue('via');
+
                         shareUrl = 'https://twitter.com/intent/tweet/';
                         params = {
-                            text: that.getValue('data-title'),
-                            url: that.getValue('data-url'),
-                            via: that.getValue('data-via'),
-                            hashtags: that.getValue('data-hashtags')
+                            text: that.getValue('title'),
+                            url: that.getValue('url'),
+                            hashtags: that.getValue('hashtags')
                         };
+
+                        if (via) {
+                            params.via = via;
+                        }
                         that.urlSharer(shareUrl, params);
                     },
                     'email': function () {
-                        var subject = that.getValue('data-subject');
-                        shareUrl = 'mailto:' + that.getValue('data-to');
+                        var subject = that.getValue('subject');
+                        shareUrl = 'mailto:' + that.getValue('to');
                         params = {
                             subject: subject,
-                            body: subject + '\n'+ that.getValue('data-title') + '\n' + that.getValue('data-url')
+                            body: subject + '\n'+ that.getValue('title') + '\n' + that.getValue('url')
                         };
                         that.urlSharer(shareUrl, params, true);
                     },
                     'whatsapp': function () {
                         shareUrl = 'whatsapp://send';
                         params = {
-                            text: that.getValue('data-title') + ' ' + that.getValue('data-url')
+                            text: that.getValue('title') + ' ' + that.getValue('url')
                         };
                         that.urlSharer(shareUrl, params, true);
                     },
                     'telegram': function () {
                         shareUrl = 'tg://msg_url';
                         params = {
-                            text: that.getValue('data-title') + ' ' + that.getValue('data-url')
+                            text: that.getValue('title') + ' ' + that.getValue('url')
                         };
                         that.urlSharer(shareUrl, params, true);
                     },
                     'viber': function () {
                         shareUrl = 'viber://forward';
-                        params = {text: that.getValue('data-title') + ' ' + that.getValue('data-url')};
+                        params = {text: that.getValue('title') + ' ' + that.getValue('url')};
                         that.urlSharer(shareUrl, params, true);
                     },
                     'line': function () {
-                        var text = that.getValue('data-title') + ' ' + that.getValue('data-url');
+                        var text = that.getValue('title') + ' ' + that.getValue('url');
                         shareUrl = 'http://line.me/R/msg/text/?' + encodeURIComponent(text);
                         that.urlSharer(shareUrl, {}, true);
                     },
                     'pinterest': function () {
                         shareUrl = 'https://www.pinterest.com/pin/create/button/';
-                        params = {url: that.getValue('data-url')};
+                        params = {url: that.getValue('url')};
                         that.urlSharer(shareUrl, params);
                     },
                     'tumblr': function () {
                         shareUrl = 'http://tumblr.com/widgets/share/tool';
                         params = {
-                            canonicalUrl: that.getValue('data-url'),
-                            content: that.getValue('data-url'),
+                            canonicalUrl: that.getValue('url'),
+                            content: that.getValue('url'),
                             posttype: 'link',
-                            title: that.getValue('data-title'),
-                            caption: that.getValue('data-caption'),
-                            tags: that.getValue('data-tags')
+                            title: that.getValue('title'),
+                            caption: that.getValue('caption'),
+                            tags: that.getValue('tags')
                         };
                         that.urlSharer(shareUrl, params);
                     },
                     'hackernews': function () {
                         shareUrl = 'https://news.ycombinator.com/submitlink';
                         params = {
-                            u: that.getValue('data-url'),
-                            t: that.getValue('data-title')
+                            u: that.getValue('url'),
+                            t: that.getValue('title')
                         };
                         that.urlSharer(shareUrl, params);
                     },
                     'reddit': function () {
                         shareUrl = 'https://www.reddit.com/submit';
-                        params = {'url': that.getValue('data-url')};
+                        params = {'url': that.getValue('url')};
                         that.urlSharer(shareUrl, params);
                     },
                     'vk': function () {
                         shareUrl = 'http://vk.com/share.php';
                         params = {
-                            url: that.getValue('data-url'),
-                            title: that.getValue('data-title'),
-                            description: that.getValue('data-caption')
+                            url: that.getValue('url'),
+                            title: that.getValue('title'),
+                            description: that.getValue('caption')
                         };
                         that.urlSharer(shareUrl, params);
                     },
@@ -145,23 +150,23 @@
                         shareUrl = 'https://www.xing.com/app/user';
                         params = {
                             'op': 'share',
-                            'url': that.getValue('data-url'),
-                            'title': that.getValue('data-title')
+                            'url': that.getValue('url'),
+                            'title': that.getValue('title')
                         };
                         that.urlSharer(shareUrl, params);
                     },
                     'buffer': function() {
                         shareUrl = 'https://buffer.com/add';
                         params = {
-                            url: that.getValue('data-url'),
-                            title: that.getValue('data-url'),
-                            via: that.getValue('data-twitter-username'),
-                            picture: that.getValue('data-picture')
+                            url: that.getValue('url'),
+                            title: that.getValue('title'),
+                            via: that.getValue('twitter-username'),
+                            picture: that.getValue('picture')
                         };
                         that.urlSharer(shareUrl, params);
                     },
                     'instapaper': function() {
-                        var text = that.getValue('data-title') + ' ' + that.getValue('data-url');
+                        var text = that.getValue('title') + ' ' + that.getValue('url');
                         shareUrl = 'http://www.instapaper.com/text';
                         params = {
                             u: text
@@ -171,23 +176,23 @@
                     'pocket': function() {
                         shareUrl = 'https://getpocket.com/save';
                         params = {
-                            url: that.getValue('data-url'),
-                            title: that.getValue('data-title')
+                            url: that.getValue('url'),
+                            title: that.getValue('title')
                         };
                         that.urlSharer(shareUrl, params);
                     },
                     'digg': function() {
                         shareUrl = 'http://www.digg.com/submit';
                         params = {
-                            url: that.getValue('data-url')
+                            url: that.getValue('url')
                         };
                         that.urlSharer(shareUrl, params);
                     },
                     'stumbleupon': function() {
                         shareUrl = 'http://www.stumbleupon.com/submit';
                         params = {
-                            url: that.getValue('data-url'),
-                            title: that.getValue('data-title')
+                            url: that.getValue('url'),
+                            title: that.getValue('title')
                         };
                         that.urlSharer(shareUrl, params);
                     },
