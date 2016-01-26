@@ -236,7 +236,7 @@
             l = elems.length;
 
         function addShare(elem) {
-            var target = elem.target || elem.srcElement;
+            var target = elem.currentTarget || elem.srcElement;
             var sharer = new Sharer(target);
             sharer.share();
         }
