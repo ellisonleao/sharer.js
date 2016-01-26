@@ -196,7 +196,17 @@
                         };
                         that.urlSharer(shareUrl, params);
                     },
-                    'default': function () {}
+                    flipboard: function() {
+                        shareUrl = 'https://share.flipboard.com/bookmarklet/popout';
+                        params = {
+                            v: 2,
+                            title: that.getValue('title'),
+                            url: that.getValue('url'),
+                            t: Date.now()
+                        };
+                        that.urlSharer(shareUrl, params);
+                    },
+                    default: function () {}
                 };
             return (sharers[sharer] || sharers['default'])();
         },
