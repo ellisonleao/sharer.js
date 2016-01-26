@@ -93,7 +93,10 @@ button[data-sharer="stumbleupon"] {
   background-color: #EB4924;
   box-shadow: 0 2px 0 #EB4924, 1px 4px 2px rgba(0,0,0,0.2);
 }
-
+button[data-sharer="flipboard"] {
+  background-color: #E02828;
+  box-shadow: 0 2px 0 #E02828, 1px 4px 2px rgba(0,0,0,0.2);
+}
 
 button:active {
   box-shadow: 0 0 0 transparent;

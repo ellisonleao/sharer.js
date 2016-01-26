@@ -65,7 +65,7 @@
                 <a class="anchor" href="#using-bower" aria-hidden="true"></a>
                 Using Bower
             </h2>
-            <pre>bower install sharerjs --save</pre>
+            <pre>bower install sharerjs</pre>
 
             <h2>
                 <a id="min-version" class="anchor" href="#min-version" aria-hidden="true"></a>
@@ -83,7 +83,7 @@
             </h2>
 
             <h3>
-                <a id="available-sharer-components" class="anchor" href="#available-sharer-components" aria-hidden="true"></a>Sharer.js currently supports 20 social media sites:
+                <a id="available-sharer-components" class="anchor" href="#available-sharer-components" aria-hidden="true"></a>Sharer.js currently supports more than <strong>20</strong> social media sites:
             </h3>
 
             <ul>
@@ -107,6 +107,7 @@
                 <li><a href="#pocket">Pocket</a></li>
                 <li><a href="#digg">Digg</a></li>
                 <li><a href="#stumbleupon">StumbleUpon</a></li>
+                <li><a href="#flipboard">Flipboard</a></li>
             </ul>
             <br/>
             <br/>
@@ -495,13 +496,33 @@
                 <button class="sharer button" data-sharer="stumbleupon" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on StumbleUpon</button>
             </div>
 
+
+            <div class="component">
+                <h2>
+		    <a id="flipboard" class="anchor" href="#flipboard" aria-hidden="true"></a>Flipboard
+                </h2>
+
+                <p>Available Data attributes:</p>
+
+                <ul>
+                    <li><code>data-title</code></li>
+                    <li><code>data-url</code></li>
+                </ul>
+
+                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="flipboard" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Flipboard&lt;/button&gt;</code></pre>
+
+                <p>Example:</p>
+
+                <button class="sharer button" data-sharer="flipboard" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Flipboard</button>
+            </div>
+
             <footer class="site-footer">
                 <span class="site-footer-owner"><a href="https://github.com/ellisonleao/sharer.js">Sharer.js</a> is maintained by <a href="https://github.com/ellisonleao">ellisonleao</a>.</span>
-
+                <p> <a href="#available-sharer-components">Back to top</a> </p>
             </footer>
 
         </section>
-        <script src="https://cdn.jsdelivr.net/sharer.js/0.2.8/sharer.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/sharer.js/0.2.9/sharer.min.js"></script>
         <script src="js/prism.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
