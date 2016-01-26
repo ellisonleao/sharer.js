@@ -41,17 +41,17 @@
                 shareUrl,
                 params,
                 sharers = {
-                    'facebook': function () {
+                    facebook: function () {
                         shareUrl = 'https://www.facebook.com/sharer/sharer.php';
                         params = {u: that.getValue('url')};
                         that.urlSharer(shareUrl, params);
                     },
-                    'googleplus': function () {
+                    googleplus: function () {
                         shareUrl = 'https://plus.google.com/share';
                         params = {url: that.getValue('url')};
                         that.urlSharer(shareUrl, params);
                     },
-                    'linkedin': function () {
+                    linkedin: function () {
                         shareUrl = 'https://www.linkedin.com/shareArticle';
                         params = {
                             url: that.getValue('url'),
@@ -59,7 +59,7 @@
                         };
                         that.urlSharer(shareUrl, params);
                     },
-                    'twitter': function () {
+                    twitter: function () {
                         var via = that.getValue('via');
 
                         shareUrl = 'https://twitter.com/intent/tweet/';
@@ -74,7 +74,7 @@
                         }
                         that.urlSharer(shareUrl, params);
                     },
-                    'email': function () {
+                    email: function () {
                         var subject = that.getValue('subject');
                         shareUrl = 'mailto:' + that.getValue('to');
                         params = {
@@ -83,36 +83,36 @@
                         };
                         that.urlSharer(shareUrl, params, true);
                     },
-                    'whatsapp': function () {
+                    whatsapp: function () {
                         shareUrl = 'whatsapp://send';
                         params = {
                             text: that.getValue('title') + ' ' + that.getValue('url')
                         };
                         that.urlSharer(shareUrl, params, true);
                     },
-                    'telegram': function () {
+                    telegram: function () {
                         shareUrl = 'tg://msg_url';
                         params = {
                             text: that.getValue('title') + ' ' + that.getValue('url')
                         };
                         that.urlSharer(shareUrl, params, true);
                     },
-                    'viber': function () {
+                    viber: function () {
                         shareUrl = 'viber://forward';
                         params = {text: that.getValue('title') + ' ' + that.getValue('url')};
                         that.urlSharer(shareUrl, params, true);
                     },
-                    'line': function () {
+                    line: function () {
                         var text = that.getValue('title') + ' ' + that.getValue('url');
                         shareUrl = 'http://line.me/R/msg/text/?' + encodeURIComponent(text);
                         that.urlSharer(shareUrl, {}, true);
                     },
-                    'pinterest': function () {
+                    pinterest: function () {
                         shareUrl = 'https://www.pinterest.com/pin/create/button/';
                         params = {url: that.getValue('url')};
                         that.urlSharer(shareUrl, params);
                     },
-                    'tumblr': function () {
+                    tumblr: function () {
                         shareUrl = 'http://tumblr.com/widgets/share/tool';
                         params = {
                             canonicalUrl: that.getValue('url'),
@@ -124,7 +124,7 @@
                         };
                         that.urlSharer(shareUrl, params);
                     },
-                    'hackernews': function () {
+                    hackernews: function () {
                         shareUrl = 'https://news.ycombinator.com/submitlink';
                         params = {
                             u: that.getValue('url'),
@@ -132,12 +132,12 @@
                         };
                         that.urlSharer(shareUrl, params);
                     },
-                    'reddit': function () {
+                    reddit: function () {
                         shareUrl = 'https://www.reddit.com/submit';
                         params = {'url': that.getValue('url')};
                         that.urlSharer(shareUrl, params);
                     },
-                    'vk': function () {
+                    vk: function () {
                         shareUrl = 'http://vk.com/share.php';
                         params = {
                             url: that.getValue('url'),
@@ -146,7 +146,7 @@
                         };
                         that.urlSharer(shareUrl, params);
                     },
-                    'xing': function() {
+                    xing: function() {
                         shareUrl = 'https://www.xing.com/app/user';
                         params = {
                             'op': 'share',
@@ -155,7 +155,7 @@
                         };
                         that.urlSharer(shareUrl, params);
                     },
-                    'buffer': function() {
+                    buffer: function() {
                         shareUrl = 'https://buffer.com/add';
                         params = {
                             url: that.getValue('url'),
@@ -165,7 +165,7 @@
                         };
                         that.urlSharer(shareUrl, params);
                     },
-                    'instapaper': function() {
+                    instapaper: function() {
                         var text = that.getValue('title') + ' ' + that.getValue('url');
                         shareUrl = 'http://www.instapaper.com/text';
                         params = {
@@ -173,7 +173,7 @@
                         };
                         that.urlSharer(shareUrl, params, true);
                     },
-                    'pocket': function() {
+                    pocket: function() {
                         shareUrl = 'https://getpocket.com/save';
                         params = {
                             url: that.getValue('url'),
@@ -181,14 +181,14 @@
                         };
                         that.urlSharer(shareUrl, params);
                     },
-                    'digg': function() {
+                    digg: function() {
                         shareUrl = 'http://www.digg.com/submit';
                         params = {
                             url: that.getValue('url')
                         };
                         that.urlSharer(shareUrl, params);
                     },
-                    'stumbleupon': function() {
+                    stumbleupon: function() {
                         shareUrl = 'http://www.stumbleupon.com/submit';
                         params = {
                             url: that.getValue('url'),
