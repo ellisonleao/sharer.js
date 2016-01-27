@@ -34,7 +34,11 @@
     "url": "https://github.com/ellisonleao/sharer.js/issues"
   },
   "scripts": {
-    "test": "./test.sh"
+    "test": "./test.sh",
+    "compress": "uglifyjs sharer.js --compress --mangle --comments > sharer.min.js"
   },
-  "homepage": "https://ellisonleao.github.io/sharer.js/"
+  "homepage": "https://ellisonleao.github.io/sharer.js/",
+  "devDependencies": {
+    "uglifyjs": "^2.4.10"
+  }
 }
