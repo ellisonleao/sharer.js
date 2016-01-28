@@ -142,7 +142,8 @@
                         params = {
                             url: that.getValue('url'),
                             title: that.getValue('title'),
-                            description: that.getValue('caption')
+                            description: that.getValue('caption'),
+                            image: that.getValue('picture')
                         };
                         that.urlSharer(shareUrl, params);
                     },
