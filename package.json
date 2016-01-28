@@ -1,6 +1,6 @@
 {
   "name": "sharer.js",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "Create custom social share DOM elements. No dependencies.",
   "main": "sharer.js",
   "repository": {
@@ -26,7 +26,8 @@
     "instapaper",
     "pocket",
     "stumbleupon",
-    "digg"
+    "digg",
+    "flipboard"
   ],
   "author": "Ellison Leão <ellisonleao@gmail.com>",
   "license": "MIT",
@@ -34,11 +35,12 @@
     "url": "https://github.com/ellisonleao/sharer.js/issues"
   },
   "scripts": {
-    "test": "./test.sh",
+    "test": "eslint sharer.js",
     "compress": "uglifyjs sharer.js --compress --mangle --comments > sharer.min.js"
   },
   "homepage": "https://ellisonleao.github.io/sharer.js/",
   "devDependencies": {
-    "uglifyjs": "^2.4.10"
+    "uglifyjs": "^2.4.10",
+    "eslint": "^1.10.3"
   }
 }

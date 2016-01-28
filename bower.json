@@ -25,7 +25,8 @@
     "instapaper",
     "pocket",
     "stumbleupon",
-    "digg"
+    "digg",
+    "flipboard"
   ],
   "license": "MIT",
   "ignore": [

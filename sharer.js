@@ -3,7 +3,7 @@
  * Sharer.js
  *
  * @file Tiny js lib to create a simple share component. No deps.
- * @version 0.2.9
+ * @version 0.2.10
  * @author Ellison Leao <ellisonleao@gmail.com>
  * @license MIT
  *
