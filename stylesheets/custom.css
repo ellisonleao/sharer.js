@@ -123,3 +123,40 @@ button:hover {
 	border-radius: 20px;
 	box-shadow: 1px 1px 30px #cecece;
 }
+
+.license {
+	display: inline-block;
+	text-align: center;
+	width: 300px;
+    background: #f9f9f9;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 30px #cecece;
+	margin-left: 60px;
+	margin-bottom: 20px;
+}
+
+.license-extended {
+	background: #5bb6ef;
+}
+
+.license a {
+	text-decoration: none;
+}
+
+.license .name {
+	display: block;
+	color: #000;
+}
+
+.license .price {
+	display: block;
+	font-size: 3em;
+	color: #000;
+}
+
+@media (max-width: 840px) {
+	.license {
+		margin-top: 20px;
+	}
+}
