@@ -230,8 +230,21 @@
                 str += keys[i] + '=' + encodeURIComponent(p[keys[i]]);
             }
             shareUrl += str;
+
             if (!isLink) {
-                window.open(shareUrl, '', 'height=400,width=400,scrollbars=no');
+                var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left,
+                    dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top,
+                    width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width,
+                    height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height,
+                    left = ((width / 2) - (600 / 2)) + dualScreenLeft,
+                    top = ((height / 2) - (480 / 2)) + dualScreenTop,
+                    popParams = 'scrollbars=no, width=' + 600 + ', height=' + 480 + ', top=' + top + ', left=' + left,
+                    newWindow = window.open(shareUrl, '', popParams);
+
+                // Puts focus on the newWindow
+                if (window.focus) {
+                    newWindow.focus();
+                }
             } else {
                 window.location.href = shareUrl;
             }
