@@ -232,13 +232,11 @@
             shareUrl += str;
 
             if (!isLink) {
-                var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left,
-                    dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top,
-                    width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width,
-                    height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height,
-                    left = ((width / 2) - (600 / 2)) + dualScreenLeft,
-                    top = ((height / 2) - (480 / 2)) + dualScreenTop,
-                    popParams = 'scrollbars=no, width=' + 600 + ', height=' + 480 + ', top=' + top + ', left=' + left,
+                var width = 600,
+                    height = 480,
+                    left = window.innerWidth / 2 - width / 2 + window.screenX,
+                    top = window.innerHeight / 2 - height / 2 + window.screenY,
+                    popParams = 'scrollbars=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left,
                     newWindow = window.open(shareUrl, '', popParams);
 
                 // Puts focus on the newWindow
