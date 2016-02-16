@@ -5,7 +5,7 @@
  * @description Create your own social share buttons
  * @version 0.2.11
  * @author Ellison Leao <ellisonleao@gmail.com>
- * @license MIT
+ * @license GPLv3
  *
  */
 
