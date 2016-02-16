@@ -215,7 +215,7 @@
          * @event urlSharer
          * @param {String} shareUrl
          * @param {Object} params
-         * @param {Boolean} isLink - refers is the event will pop a new window or
+         * @param {Boolean=} isLink - refers is the event will pop a new window or
          * just redirect to #shareUrl
          */
         urlSharer: function(shareUrl, params, isLink) {
