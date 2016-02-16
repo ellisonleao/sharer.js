@@ -15,7 +15,9 @@ If you want to use Sharer.js to develop commercial sites, themes, projects, and 
 
 ### Open source license
 
-The open source license is designed for you to use Sharer.js to build open source and personal projects. Sharer.js open source license is MIT. Please refer to the [MIT license docs](https://opensource.org/licenses/MIT) for further questions.
+If you are creating an open source application under a license compatible with the [GNU GPL license v3](https://www.gnu.org/licenses/gpl-3.0.html), you may use Sharer.js under the terms of the GPLv3.
+
+[Read more](http://ellisonleao.github.io/sharer.js/) about Sharer.js license.
 
 ## Documentation
 
