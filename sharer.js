@@ -36,7 +36,7 @@
          * based on the data-sharer attribute.
          */
         share: function() {
-            var sharer = this.getValue('sharer'),
+            var sharer = this.getValue('sharer').toLowerCase(),
                 that = this,
                 shareUrl,
                 params,
