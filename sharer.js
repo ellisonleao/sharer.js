@@ -207,6 +207,48 @@
                         };
                         that.urlSharer(shareUrl, params);
                     },
+                    weibo: function() {
+                        shareUrl = 'http://service.weibo.com/share/share.php';
+                        params = {
+                            url: that.getValue('url'),
+                            title: that.getValue('title'),
+                            language: 'zh_cn'
+                        };
+                        that.urlSharer(shareUrl, params);
+                    },
+                    renren: function() {
+                        shareUrl = 'http://share.renren.com/share/buttonshare';
+                        params = {
+                            link: that.getValue('url')
+                        };
+                        that.urlSharer(shareUrl, params);
+                    },
+                    myspace: function() {
+                        shareUrl = 'https://myspace.com/post';
+                        params = {
+                            u: that.getValue('url'),
+                            t: that.getValue('title'),
+                            c: that.getValue('description')
+                        };
+                        that.urlSharer(shareUrl, params);
+                    },
+                    blogger: function() {
+                        shareUrl = 'https://www.blogger.com/blog-this.g';
+                        params = {
+                            u: that.getValue('url'),
+                            n: that.getValue('title'),
+                            t: that.getValue('description')
+                        };
+                        that.urlSharer(shareUrl, params);
+                    },
+                    baidu: function() {
+                        shareUrl = 'http://cang.baidu.com/do/add';
+                        params = {
+                            it: that.getValue('title'),
+                            iu: that.getValue('url')
+                        };
+                        that.urlSharer(shareUrl, params);
+                    },
                     default: function () {}
                 };
             return (sharers[sharer] || sharers['default'])();
