@@ -97,6 +97,26 @@ button[data-sharer="flipboard"] {
   background-color: #E02828;
   box-shadow: 0 2px 0 #E02828, 1px 4px 2px rgba(0,0,0,0.2);
 }
+button[data-sharer="weibo"] {
+  background-color: #E6162D;
+  box-shadow: 0 2px 0 #E6162D, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="renren"] {
+  background-color: #005EAC;
+  box-shadow: 0 2px 0 #005EAC, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="myspace"] {
+  background-color: #111;
+  box-shadow: 0 2px 0 #111, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="blogger"] {
+  background-color: #EB8104;
+  box-shadow: 0 2px 0 #EB8104, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="baidu"] {
+  background-color: #2319DC;
+  box-shadow: 0 2px 0 #2319DC, 1px 4px 2px rgba(0,0,0,0.2);
+}
 
 button:active {
   box-shadow: 0 0 0 transparent;
@@ -158,5 +178,6 @@ button:hover {
 @media (max-width: 840px) {
 	.license {
 		margin-top: 20px;
+		margin-left: 0;
 	}
 }
