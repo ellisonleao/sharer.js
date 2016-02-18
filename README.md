@@ -23,7 +23,7 @@ If you want to use Sharer.js to develop commercial sites, themes, projects, and 
 
 If you are creating an open source application under a license compatible with the [GNU GPL license v3](https://www.gnu.org/licenses/gpl-3.0.html), you may use Sharer.js under the terms of the GPLv3.
 
-[Read more](http://ellisonleao.github.io/sharer.js/) about Sharer.js license.
+[Read more](http://ellisonleao.github.io/sharer.js/#licenses) about Sharer.js license.
 
 ## Documentation
 

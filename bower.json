@@ -26,7 +26,12 @@
     "pocket",
     "stumbleupon",
     "digg",
-    "flipboard"
+    "flipboard",
+    "weibo",
+    "renren",
+    "blogger",
+    "myspace",
+    "baidu"
   ],
   "license": "MIT",
   "ignore": [
