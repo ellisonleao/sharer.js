@@ -20,6 +20,11 @@
 
     Sharer.prototype = {
         /**
+         * @description manually set the constructor prop
+         */
+        constructor: Sharer,
+
+        /**
          *  @function getValue
          *  @description Helper to get the attribute of a DOM element
          *  @param {String} attr DOM element attribute
