@@ -127,7 +127,7 @@
                             url: this.getValue('url'),
                             title: this.getValue('title'),
                             description: this.getValue('caption'),
-                            image: this.getValue('picture')
+                            image: this.getValue('image')
                         }
                     },
                     xing: {
