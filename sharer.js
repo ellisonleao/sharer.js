@@ -66,7 +66,7 @@
                         shareUrl: 'mailto:' + this.getValue('to'),
                         params: {
                             subject: this.getValue('subject'),
-                            body: this.getValue('subject') + '\n'+ this.getValue('title') + '\n' + this.getValue('url')
+                            body: this.getValue('title') + '\n' + this.getValue('url')
                         },
                         isLink: true
                     },
