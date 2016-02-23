@@ -388,7 +388,7 @@
                 <ul>
                     <li><code>data-url</code></li>
                     <li><code>data-title</code></li>
-                    <li><code>data-image</code> (optional: url of the share image)</li>
+                    <li><code>data-image</code> Absolute url for the share image (optional)</li>
                     <li><code>data-caption</code> (optional)</li>
                 </ul>
 
@@ -564,6 +564,9 @@
                 <ul>
                     <li><code>data-url</code></li>
                     <li><code>data-title</code></li>
+                    <li><code>data-image</code> Absolute url for share image (optional)</li>
+                    <li><code>data-appkey</code> (optional)</li>
+                    <li><code>data-ralateuid</code>(optional)</li>
                 </ul>
 
                 <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="flipboard" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Weibo&lt;/button&gt;</code></pre>
@@ -656,7 +659,7 @@
             </footer>
 
         </section>
-        <script src="https://cdn.jsdelivr.net/sharer.js/0.2.13/sharer.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/sharer.js/0.2.14/sharer.min.js"></script>
         <script src="js/prism.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
