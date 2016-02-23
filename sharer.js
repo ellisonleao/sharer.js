@@ -19,6 +19,7 @@
     };
 
     Sharer.prototype = {
+        constructor: Sharer,
         /**
          *  @function getValue
          *  @description Helper to get the attribute of a DOM element
