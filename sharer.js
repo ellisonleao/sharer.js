@@ -188,6 +188,9 @@
                         params: {
                             url: this.getValue('url'),
                             title: this.getValue('title'),
+                            pic: this.getValue('image'),
+                            appkey: this.getValue('appkey'),
+                            ralateUid: this.getValue('ralateuid'),
                             language: 'zh_cn'
                         }
                     },
