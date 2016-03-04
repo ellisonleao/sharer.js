@@ -98,7 +98,11 @@
                     },
                     pinterest: {
                         shareUrl: 'https://www.pinterest.com/pin/create/button/',
-                        params: {url: this.getValue('url')}
+                        params: {
+                            url: this.getValue('url'),
+                            media: this.getValue('image'),
+                            description: this.getValue('description')
+                        }
                     },
                     tumblr: {
                         shareUrl: 'http://tumblr.com/widgets/share/tool',
