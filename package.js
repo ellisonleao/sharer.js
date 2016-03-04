@@ -1,6 +1,6 @@
 Package.describe({
     name: 'ellisonleao:sharerjs',
-    version: '0.2.14',
+    version: '0.2.15',
     summary: 'Create your own social share buttons',
     git: 'git://github.com/ellisonleao/sharer.js',
     documentation: 'README.md'
