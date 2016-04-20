@@ -227,6 +227,14 @@
                             it: this.getValue('title'),
                             iu: this.getValue('url')
                         }
+                    },
+                    douban: {
+                        shareUrl: 'https://www.douban.com/share/service',
+                        params: {
+                            name: this.getValue('title'),
+                            href: this.getValue('url'),
+                            image: this.getValue('image')
+                        }
                     }
                 },
                 s = sharers[sharer];
