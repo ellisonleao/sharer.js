@@ -235,6 +235,14 @@
                             href: this.getValue('url'),
                             image: this.getValue('image')
                         }
+                    },
+                    okru: {
+                        shareUrl: 'https://connect.ok.ru/dk',
+                        params: {
+                            'st.cmd': 'WidgetSharePreview',
+                            'st.shareUrl': this.getValue('url'),
+                            'title': this.getValue('title')
+                        }
                     }
                 },
                 s = sharers[sharer];
