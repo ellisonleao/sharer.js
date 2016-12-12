@@ -1,6 +1,6 @@
 {
   "name": "sharer.js",
-  "version": "0.2.16",
+  "version": "0.2.17",
   "description": "Create custom social share DOM elements. No dependencies.",
   "main": "sharer.js",
   "repository": {
@@ -33,7 +33,8 @@
     "blogger",
     "myspace",
     "baidu",
-    "okru"
+    "okru",
+    "mailru"
   ],
   "author": "Ellison Leão <ellisonleao@gmail.com>",
   "license": "MIT",
