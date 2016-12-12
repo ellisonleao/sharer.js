@@ -243,6 +243,15 @@
                             'st.shareUrl': this.getValue('url'),
                             'title': this.getValue('title')
                         }
+                    },
+                    mailru: {
+                        shareUrl: 'http://connect.mail.ru/share',
+                        params: {
+                            'share_url': this.getValue('url'),
+                            'linkname': this.getValue('title'),
+                            'linknote': this.getValue('description'),
+                            'type': 'page'
+                        }
                     }
                 },
                 s = sharers[sharer];
