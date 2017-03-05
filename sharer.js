@@ -302,7 +302,8 @@
     /**
      * Creates a click event on every DOM element which has the `sharer` class
      */
-    window.addEventListener('load', function() {
+
+    function startSharer(){
         var elems = document.querySelectorAll('.sharer'),
             i,
             l = elems.length;
@@ -316,5 +317,8 @@
         for (i = 0; i < l ; i++) {
             elems[i].addEventListener('click', addShare);
         }
-    });
+    }
+    window.addEventListener('load', startSharer());
+    window.addEventListener('page:load', startSharer());
+
 })(window, document);
