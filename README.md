@@ -9,7 +9,7 @@ Sharer.js is a very tiny js lib to create custom social share components on DOM 
 
 ## AMD CommonJS Support
 
-Currently there is no support for AMD/CommonJS right now, but there is a repo which exposes the current Sharer class behaviour. 
+Currently there is no support for AMD/CommonJS right now, but there is a repo which exposes the current Sharer class behaviour.
 
 Please checkout https://github.com/okmttdhr/sharer.npm.js
 
@@ -25,15 +25,7 @@ Sharer.js and [Turbolinks](https://github.com/turbolinks/turbolinks) play nice o
 
 ## License
 
-### Commercial license
-
-If you want to use Sharer.js to develop commercial sites, themes, projects, and applications, the Commercial license is the appropriate license. With this option, your source code is kept proprietary. Purchase a Sharer.js Commercial License at [http://www.site.uplabs.com/posts/sharer-js](http://www.site.uplabs.com/posts/sharer-js)
-
-### Open source license
-
-If you are creating an open source application under a license compatible with the [GNU GPL license v3](https://www.gnu.org/licenses/gpl-3.0.html), you may use Sharer.js under the terms of the GPLv3.
-
-[Read more](http://ellisonleao.github.io/sharer.js/#licenses) about Sharer.js license.
+MIT
 
 ## Documentation
 

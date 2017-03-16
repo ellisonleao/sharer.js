@@ -1,7 +1,7 @@
 {
   "name": "sharer.js",
-  "version": "0.2.17",
-  "description": "Create custom social share DOM elements. No dependencies.",
+  "version": "0.3.0",
+  "description": "Create your own social share buttons. No Jquery.",
   "main": "sharer.js",
   "repository": {
     "type": "git",
@@ -43,7 +43,7 @@
   },
   "scripts": {
     "test": "eslint sharer.js",
-    "compress": "uglifyjs sharer.js --compress --mangle --comments > sharer.min.js"
+    "compress": "uglifyjs sharer.js --mangle > sharer.min.js"
   },
   "homepage": "https://ellisonleao.github.io/sharer.js/",
   "devDependencies": {
