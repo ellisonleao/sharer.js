@@ -19,6 +19,10 @@ Please checkout https://github.com/okmttdhr/sharer.npm.js
 | --------- | --------- | --------- | --------- | --------- | --------- | --------- | --------- |
 | IE9, IE10, IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions
 
+## Turbolinks compatible
+
+Sharer.js and [Turbolinks](https://github.com/turbolinks/turbolinks) play nice out of the box!
+
 ## License
 
 ### Commercial license
