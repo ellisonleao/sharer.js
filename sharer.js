@@ -3,7 +3,7 @@
  * Sharer.js
  *
  * @description Create your own social share buttons
- * @version 0.3.0
+ * @version 0.3.1
  * @author Ellison Leao <ellisonleao@gmail.com>
  * @license MIT
  *
@@ -18,6 +18,33 @@
         this.elem = elem;
     };
 
+    /**
+     *  @function init
+     *  @description bind the events for multiple sharer elements
+     *  @returns {Empty}
+     */
+    Sharer.init = function() {
+        var elems = document.querySelectorAll('.sharer'),
+            i,
+            l = elems.length;
+
+        for (i = 0; i < l ; i++) {
+            elems[i].addEventListener('click', Sharer.add);
+        }
+    };
+
+    /**
+     *  @function add
+     *  @description bind the share event for a single dom element
+     *  @returns {Empty}
+     */
+    Sharer.add = function(elem) {
+        var target = elem.currentTarget || elem.srcElement;
+        var sharer = new Sharer(target);
+        sharer.share();
+    };
+
+    // instance methods
     Sharer.prototype = {
         constructor: Sharer,
         /**
@@ -299,26 +326,17 @@
         }
     };
 
-    /**
-     * Creates a click event on every DOM element which has the `sharer` class
-     */
-
-    function startSharer(){
-        var elems = document.querySelectorAll('.sharer'),
-            i,
-            l = elems.length;
-
-        function addShare(elem) {
-            var target = elem.currentTarget || elem.srcElement;
-            var sharer = new Sharer(target);
-            sharer.share();
-        }
-
-        for (i = 0; i < l ; i++) {
-            elems[i].addEventListener('click', addShare);
-        }
+    // adding sharer events on domcontentload
+    if (document.readyState === 'complete' || document.readyState !== 'loading') {
+        Sharer.init();
+    } else {
+        document.addEventListener('DOMContentLoaded', Sharer.init);
     }
-    window.addEventListener('load', startSharer());
-    window.addEventListener('page:load', startSharer());
+
+    // turbolinks compatibility
+    window.addEventListener('page:load', Sharer.init);
+
+    // exporting sharer for external usage
+    window.Sharer = Sharer;
 
 })(window, document);
