@@ -25,7 +25,7 @@ Sharer.js and [Turbolinks](https://github.com/turbolinks/turbolinks) play nice o
 
 ## License
 
-MIT
+GPLv3
 
 ## Documentation
 
