@@ -51,11 +51,13 @@
          *  @function getValue
          *  @description Helper to get the attribute of a DOM element
          *  @param {String} attr DOM element attribute
+         *  @param {String} defaultValue value to use for attr
          *  @returns {String|Empty} returns the attr value or empty string
          */
-        getValue: function(attr) {
+        getValue: function(attr, defaultValue) {
+            defaultValue = (defaultValue === undefined) ? '' : defaultValue;
             var val = this.elem.getAttribute('data-' + attr);
-            return (val === undefined || val === null) ? false : val;
+            return (val === undefined || val === null) ? defaultValue : val;
         },
 
         /**
