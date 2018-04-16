@@ -24,7 +24,7 @@
      *  @returns {Empty}
      */
     Sharer.init = function() {
-        var elems = document.querySelectorAll('.sharer'),
+        var elems = document.querySelectorAll('[data-sharer]'),
             i,
             l = elems.length;
 
@@ -70,11 +70,15 @@
                 sharers = {
                     facebook: {
                         shareUrl: 'https://www.facebook.com/sharer/sharer.php',
-                        params: {u: this.getValue('url')}
+                        params: {
+                            u: this.getValue('url')
+                        }
                     },
                     googleplus: {
                         shareUrl: 'https://plus.google.com/share',
-                        params: {url: this.getValue('url')}
+                        params: {
+                            url: this.getValue('url')
+                        }
                     },
                     linkedin: {
                         shareUrl: 'https://www.linkedin.com/shareArticle',
