@@ -117,7 +117,7 @@
             <p>Each sharer component has its own <pre>data-*</pre> attributes. Checkout those elements below based on each social media site.</p>
             <p>You can also set the popups sizes by adding <pre>data-width</pre> and <pre>data-height</pre> attributes.</p>
             <p>Example:</p>
-            <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="somesharer" data-width="800" data-height="600" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share!&lt;/button&gt;</code></pre>
+            <pre><code class="language-markup">&lt;button class="button" data-sharer="somesharer" data-width="800" data-height="600" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share!&lt;/button&gt;</code></pre>
 
             <h1>Manual event binding</h1>
             <p>Manual event binding is now supported from versions 0.3.1 and above throught the <code>window.Sharer</code> object.</p>
@@ -126,7 +126,7 @@
                 <code class="language-javascript">
 $(elem).on('click', function() {
     // add new buttons with share behaviour
-    $('#someDiv').append('&lt;button class="sharer twitter" data-title="Some button" data-url="somesite.com">&lt;/button>');
+    $('#someDiv').append('&lt;button class="twitter" data-title="Some button" data-url="somesite.com">&lt;/button>');
     window.Sharer.init();
 })
                 </code>
@@ -149,11 +149,11 @@ $(elem).on('click', function() {
                     <li><code>data-via</code> (optional: twitter username without @)</li>
                     <li><code>data-hashtags</code> (optional: comma separated hashtags)</li>
                 </ul>
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-hashtags="awesome, sharer.js" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Twitter&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-hashtags="awesome, sharer.js" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Twitter&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-hashtags="awesome, sharer.js" data-url="https://ellisonleao.github.io/sharer.js/" >Share on Twitter</button>
+                <button class="button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-hashtags="awesome, sharer.js" data-url="https://ellisonleao.github.io/sharer.js/" >Share on Twitter</button>
             </div>
 
             <div class="component">
@@ -166,11 +166,11 @@ $(elem).on('click', function() {
                 <ul>
                     <li><code>data-url</code></li>
                 </ul>
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="facebook" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Facebook&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="facebook" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Facebook&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="facebook" data-url="https://ellisonleao.github.io/sharer.js/">Share on Facebook</button>
+                <button class="button" data-sharer="facebook" data-url="https://ellisonleao.github.io/sharer.js/">Share on Facebook</button>
             </div>
 
 
@@ -185,11 +185,11 @@ $(elem).on('click', function() {
                     <li><code>data-url</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="linkedin" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Linkedin&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="linkedin" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Linkedin&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="linkedin" data-url="https://ellisonleao.github.io/sharer.js/">Share on Linkedin</button>
+                <button class="button" data-sharer="linkedin" data-url="https://ellisonleao.github.io/sharer.js/">Share on Linkedin</button>
             </div>
 
             <div class="component">
@@ -203,11 +203,11 @@ $(elem).on('click', function() {
                     <li><code>data-url</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="googleplus" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Google+&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="googleplus" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Google+&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="googleplus" data-url="https://ellisonleao.github.io/sharer.js/">Share on Google+</button>
+                <button class="button" data-sharer="googleplus" data-url="https://ellisonleao.github.io/sharer.js/">Share on Google+</button>
             </div>
 
 
@@ -225,12 +225,12 @@ $(elem).on('click', function() {
                     <li><code>data-subject</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="email" data-title="Awesome Url" data-url="https://ellisonleao.github.io/sharer.js/" data-subject="Hey! Check out that URL" data-to="some@email.com"&gt;Share via Email&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="email" data-title="Awesome Url" data-url="https://ellisonleao.github.io/sharer.js/" data-subject="Hey! Check out that URL" data-to="some@email.com"&gt;Share via Email&lt;/button&gt;</code></pre>
 
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="email" data-title="Awesome Url" data-url="https://ellisonleao.github.io/sharer.js/" data-subject="Hey! Check out that URL" data-to="some@email.com">Share via Email</button>
+                <button class="button" data-sharer="email" data-title="Awesome Url" data-url="https://ellisonleao.github.io/sharer.js/" data-subject="Hey! Check out that URL" data-to="some@email.com">Share via Email</button>
             </div>
 
 
@@ -246,11 +246,11 @@ $(elem).on('click', function() {
                     <li><code>data-url</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="whatsapp" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Whatsapp&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="whatsapp" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Whatsapp&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="whatsapp" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Whatsapp</button>
+                <button class="button" data-sharer="whatsapp" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Whatsapp</button>
             </div>
 
             <div class="component">
@@ -264,11 +264,11 @@ $(elem).on('click', function() {
                     <li><code>data-url</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="telegram" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Telegram&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="telegram" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Telegram&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="telegram" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Telegram</button>
+                <button class="button" data-sharer="telegram" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Telegram</button>
             </div>
 
             <div class="component">
@@ -282,11 +282,11 @@ $(elem).on('click', function() {
                     <li><code>data-url</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="viber" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Viber&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="viber" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Viber&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="viber" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Viber</button>
+                <button class="button" data-sharer="viber" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Viber</button>
             </div>
 
             <div class="component">
@@ -302,11 +302,11 @@ $(elem).on('click', function() {
                     <li><code>data-description</code> (optional)</li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="pinterest" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Pinterest&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="pinterest" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Pinterest&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="pinterest" data-url="https://ellisonleao.github.io/sharer.js/">Share on Pinterest</button>
+                <button class="button" data-sharer="pinterest" data-url="https://ellisonleao.github.io/sharer.js/">Share on Pinterest</button>
             </div>
 
 
@@ -326,8 +326,8 @@ $(elem).on('click', function() {
 
                 <p>Example:</p>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="tumblr" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-tags="social,share,testing" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Tumblr&lt;/button&gt;</code></pre>
-                <button class="sharer button" data-sharer="tumblr" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-tags="social,share,testing" data-url="https://ellisonleao.github.io/sharer.js/">Share on Tumblr</button>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="tumblr" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-tags="social,share,testing" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Tumblr&lt;/button&gt;</code></pre>
+                <button class="button" data-sharer="tumblr" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-tags="social,share,testing" data-url="https://ellisonleao.github.io/sharer.js/">Share on Tumblr</button>
             </div>
 
             <div class="component">
@@ -342,11 +342,11 @@ $(elem).on('click', function() {
                     <li><code>data-title</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="hackernews" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Hackernews&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="hackernews" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Hackernews&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="hackernews"  data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Hackernews</button>
+                <button class="button" data-sharer="hackernews"  data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Hackernews</button>
             </div>
 
             <div class="component">
@@ -360,11 +360,11 @@ $(elem).on('click', function() {
                     <li><code>data-url</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="reddit" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Reddit&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="reddit" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Reddit&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="reddit" data-url="https://ellisonleao.github.io/sharer.js/">Share on Reddit</button>
+                <button class="button" data-sharer="reddit" data-url="https://ellisonleao.github.io/sharer.js/">Share on Reddit</button>
             </div>
 
             <div class="component">
@@ -381,11 +381,11 @@ $(elem).on('click', function() {
                     <li><code>data-caption</code> (optional)</li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="vk" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on VK&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="vk" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on VK&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="vk" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on VK</button>
+                <button class="button" data-sharer="vk" data-caption="Sharer.js is the ultimate sharer js lib" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on VK</button>
             </div>
 
 	    <div class="component">
@@ -402,11 +402,11 @@ $(elem).on('click', function() {
 		    <li><code>data-picture</code> (If picture url is set, the link meta be replaced)</li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="buffer" data-via="ellisonleao" data-picture="https://ellisonleao.github.io/sharer.js/img/socialbg.png" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Buffer&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="buffer" data-via="ellisonleao" data-picture="https://ellisonleao.github.io/sharer.js/img/socialbg.png" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Buffer&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="buffer" data-title="Sharer.js is the ultimate sharer js lib" data-via="ellisonleao" data-picture="https://ellisonleao.github.io/sharer.js/img/socialbg.png" data-url="https://ellisonleao.github.io/sharer.js/">Share on Buffer</button>
+                <button class="button" data-sharer="buffer" data-title="Sharer.js is the ultimate sharer js lib" data-via="ellisonleao" data-picture="https://ellisonleao.github.io/sharer.js/img/socialbg.png" data-url="https://ellisonleao.github.io/sharer.js/">Share on Buffer</button>
             </div>
 
 	    <div class="component">
@@ -421,11 +421,11 @@ $(elem).on('click', function() {
                     <li><code>data-title</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="xing" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Xing&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="xing" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Xing&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="xing" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/">Share on Xing</button>
+                <button class="button" data-sharer="xing" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/">Share on Xing</button>
             </div>
 
 	    <div class="component">
@@ -440,11 +440,11 @@ $(elem).on('click', function() {
                     <li><code>data-title</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="line" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Line&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="line" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Line&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="line" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/">Share on Line</button>
+                <button class="button" data-sharer="line" data-title="Sharer.js is the ultimate sharer js lib" data-url="https://ellisonleao.github.io/sharer.js/">Share on Line</button>
             </div>
 
             <div class="component">
@@ -460,11 +460,11 @@ $(elem).on('click', function() {
                     <li><code>data-description</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="instapaper" data-title="Checkout Sharer.js!" data-description="Awesome lib!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Instapaper&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="instapaper" data-title="Checkout Sharer.js!" data-description="Awesome lib!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Instapaper&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="instapaper" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!" data-description="Awesome lib!">Share on Instapaper</button>
+                <button class="button" data-sharer="instapaper" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!" data-description="Awesome lib!">Share on Instapaper</button>
             </div>
 
 
@@ -479,11 +479,11 @@ $(elem).on('click', function() {
                     <li><code>data-url</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="pocket" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Pocket&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="pocket" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Pocket&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="pocket" data-url="https://ellisonleao.github.io/sharer.js/">Share on Pocket</button>
+                <button class="button" data-sharer="pocket" data-url="https://ellisonleao.github.io/sharer.js/">Share on Pocket</button>
             </div>
 
             <div class="component">
@@ -497,11 +497,11 @@ $(elem).on('click', function() {
                     <li><code>data-url</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="digg" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Digg&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="digg" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Digg&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="digg" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Digg</button>
+                <button class="button" data-sharer="digg" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Digg</button>
             </div>
 
             <div class="component">
@@ -516,11 +516,11 @@ $(elem).on('click', function() {
                     <li><code>data-url</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="stumbleupon" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on StumbleUpon&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="stumbleupon" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on StumbleUpon&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="stumbleupon" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on StumbleUpon</button>
+                <button class="button" data-sharer="stumbleupon" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on StumbleUpon</button>
             </div>
 
 
@@ -536,11 +536,11 @@ $(elem).on('click', function() {
                     <li><code>data-url</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="flipboard" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Flipboard&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="flipboard" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Flipboard&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="flipboard" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Flipboard</button>
+                <button class="button" data-sharer="flipboard" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Flipboard</button>
             </div>
 
             <div class="component">
@@ -558,11 +558,11 @@ $(elem).on('click', function() {
                     <li><code>data-ralateuid</code>(optional)</li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="weibo" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Weibo&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="weibo" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Weibo&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="weibo" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!">Share on weibo</button>
+                <button class="button" data-sharer="weibo" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!">Share on weibo</button>
             </div>
 
             <div class="component">
@@ -576,11 +576,11 @@ $(elem).on('click', function() {
                     <li><code>data-url</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="renren" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on renren&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="renren" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on renren&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="renren" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!">Share on renren</button>
+                <button class="button" data-sharer="renren" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!">Share on renren</button>
             </div>
 
             <div class="component">
@@ -596,11 +596,11 @@ $(elem).on('click', function() {
                     <li><code>data-description</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="myspace" data-url="https://ellisonleao.github.io/sharer.js/" data-description="Awesome lib!"&gt;Share on myspace&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="myspace" data-url="https://ellisonleao.github.io/sharer.js/" data-description="Awesome lib!"&gt;Share on myspace&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="myspace" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!" data-description="Awesome lib!">Share on myspace</button>
+                <button class="button" data-sharer="myspace" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!" data-description="Awesome lib!">Share on myspace</button>
             </div>
 
             <div class="component">
@@ -616,11 +616,11 @@ $(elem).on('click', function() {
                     <li><code>data-description</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="blogger" data-url="https://ellisonleao.github.io/sharer.js/" data-description="Awesome lib!"&gt;Share on blogger&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="blogger" data-url="https://ellisonleao.github.io/sharer.js/" data-description="Awesome lib!"&gt;Share on blogger&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="blogger" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!" data-description="Awesome lib!">Share on blogger</button>
+                <button class="button" data-sharer="blogger" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!" data-description="Awesome lib!">Share on blogger</button>
             </div>
 
             <div class="component">
@@ -635,11 +635,11 @@ $(elem).on('click', function() {
                     <li><code>data-title</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="baidu" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!"&gt;Share on baidu&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="baidu" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!"&gt;Share on baidu&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="baidu" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!">Share on Baidu</button>
+                <button class="button" data-sharer="baidu" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!">Share on Baidu</button>
             </div>
 
             <div class="component">
@@ -654,11 +654,11 @@ $(elem).on('click', function() {
                     <li><code>data-title</code></li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="sharer button" data-sharer="okru" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!"&gt;Share on Ok.ru&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="okru" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!"&gt;Share on Ok.ru&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="sharer button" data-sharer="okru" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!">Share on Ok.ru</button>
+                <button class="button" data-sharer="okru" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!">Share on Ok.ru</button>
             </div>
 
 
@@ -668,7 +668,7 @@ $(elem).on('click', function() {
             </footer>
 
         </section>
-        <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sharer.js@0.3.3/sharer.min.js"></script>
         <script src="js/prism.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
