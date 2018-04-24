@@ -71,7 +71,8 @@
                     facebook: {
                         shareUrl: 'https://www.facebook.com/sharer/sharer.php',
                         params: {
-                            u: this.getValue('url')
+                            u: this.getValue('url'),
+                            hashtag: '#' + this.getValue('hashtags'),
                         }
                     },
                     googleplus: {
