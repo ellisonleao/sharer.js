@@ -72,13 +72,7 @@
                         shareUrl: 'https://www.facebook.com/sharer/sharer.php',
                         params: {
                             u: this.getValue('url'),
-                            hashtag: '#' + this.getValue('hashtags'),
-                        }
-                    },
-                    googleplus: {
-                        shareUrl: 'https://plus.google.com/share',
-                        params: {
-                            url: this.getValue('url')
+                            hashtag: '#' + this.getValue('hashtag'),
                         }
                     },
                     linkedin: {
