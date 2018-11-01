@@ -51,13 +51,18 @@
          *  @function getValue
          *  @description Helper to get the attribute of a DOM element
          *  @param {String} attr DOM element attribute
-         *  @param {String} defaultValue value to use for attr
          *  @returns {String|Empty} returns the attr value or empty string
          */
-        getValue: function(attr, defaultValue) {
-            defaultValue = (defaultValue === undefined) ? '' : defaultValue;
+        getValue: function(attr) {
             var val = this.elem.getAttribute('data-' + attr);
-            return (val === undefined || val === null) ? defaultValue : val;
+            if (!val) return;
+            // handing facebook hashtag attribute
+            if (attr === 'hashtag') {
+                if (!val.startsWith('#')) {
+                    val = '#' + val;
+                }
+            }
+            return val;
         },
 
         /**
@@ -72,7 +77,7 @@
                         shareUrl: 'https://www.facebook.com/sharer/sharer.php',
                         params: {
                             u: this.getValue('url'),
-                            hashtag: '#' + this.getValue('hashtag'),
+                            hashtag: this.getValue('hashtag'),
                         }
                     },
                     linkedin: {
