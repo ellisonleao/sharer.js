@@ -1,6 +1,6 @@
 {
   "name": "sharer.js",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Create your own social share buttons. No Jquery.",
   "main": "sharer.js",
   "repository": {
