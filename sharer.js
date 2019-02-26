@@ -9,7 +9,7 @@
  *
  */
 
-(function (window, document) {
+(function(window, document) {
     'use strict';
     /**
      * @constructor
@@ -28,7 +28,7 @@
             i,
             l = elems.length;
 
-        for (i = 0; i < l ; i++) {
+        for (i = 0; i < l; i++) {
             elems[i].addEventListener('click', Sharer.add);
         }
     };
@@ -55,9 +55,8 @@
          */
         getValue: function(attr) {
             var val = this.elem.getAttribute('data-' + attr);
-            if (!val) return;
             // handing facebook hashtag attribute
-            if (attr === 'hashtag') {
+            if (val && attr === 'hashtag') {
                 if (!val.startsWith('#')) {
                     val = '#' + val;
                 }
@@ -77,7 +76,7 @@
                         shareUrl: 'https://www.facebook.com/sharer/sharer.php',
                         params: {
                             u: this.getValue('url'),
-                            hashtag: this.getValue('hashtag'),
+                            hashtag: this.getValue('hashtag')
                         }
                     },
                     linkedin: {
@@ -97,7 +96,7 @@
                         }
                     },
                     email: {
-                        shareUrl: 'mailto:' + this.getValue('to'),
+                        shareUrl: 'mailto:' + this.getValue('to') || '',
                         params: {
                             subject: this.getValue('subject'),
                             body: this.getValue('title') + '\n' + this.getValue('url')
@@ -105,7 +104,7 @@
                         isLink: true
                     },
                     whatsapp: {
-                        shareUrl: 'whatsapp://send',
+                        shareUrl: this.getValue('web') !== null ? 'https://api.whatsapp.com/send' : 'whatsapp://send',
                         params: {
                             text: this.getValue('title') + ' ' + this.getValue('url')
                         },
@@ -126,7 +125,9 @@
                         isLink: true
                     },
                     line: {
-                        shareUrl: 'http://line.me/R/msg/text/?' + encodeURIComponent(this.getValue('title') + ' ' + this.getValue('url')),
+                        shareUrl:
+                            'http://line.me/R/msg/text/?' +
+                            encodeURIComponent(this.getValue('title') + ' ' + this.getValue('url')),
                         isLink: true
                     },
                     pinterest: {
@@ -157,7 +158,7 @@
                     },
                     reddit: {
                         shareUrl: 'https://www.reddit.com/submit',
-                        params: {'url': this.getValue('url')}
+                        params: { url: this.getValue('url') }
                     },
                     vk: {
                         shareUrl: 'http://vk.com/share.php',
@@ -171,9 +172,9 @@
                     xing: {
                         shareUrl: 'https://www.xing.com/app/user',
                         params: {
-                            'op': 'share',
-                            'url': this.getValue('url'),
-                            'title': this.getValue('title')
+                            op: 'share',
+                            url: this.getValue('url'),
+                            title: this.getValue('title')
                         }
                     },
                     buffer: {
@@ -274,16 +275,16 @@
                         params: {
                             'st.cmd': 'WidgetSharePreview',
                             'st.shareUrl': this.getValue('url'),
-                            'title': this.getValue('title')
+                            title: this.getValue('title')
                         }
                     },
                     mailru: {
                         shareUrl: 'http://connect.mail.ru/share',
                         params: {
-                            'share_url': this.getValue('url'),
-                            'linkname': this.getValue('title'),
-                            'linknote': this.getValue('description'),
-                            'type': 'page'
+                            share_url: this.getValue('url'),
+                            linkname: this.getValue('title'),
+                            linknote: this.getValue('description'),
+                            type: 'page'
                         }
                     }
                 },
@@ -320,7 +321,15 @@
                     popHeight = sharer.height || 480,
                     left = window.innerWidth / 2 - popWidth / 2 + window.screenX,
                     top = window.innerHeight / 2 - popHeight / 2 + window.screenY,
-                    popParams = 'scrollbars=no, width=' + popWidth + ', height=' + popHeight + ', top=' + top + ', left=' + left,
+                    popParams =
+                        'scrollbars=no, width=' +
+                        popWidth +
+                        ', height=' +
+                        popHeight +
+                        ', top=' +
+                        top +
+                        ', left=' +
+                        left,
                     newWindow = window.open(sharer.shareUrl, '', popParams);
 
                 if (window.focus) {
@@ -344,5 +353,4 @@
 
     // exporting sharer for external usage
     window.Sharer = Sharer;
-
 })(window, document);
