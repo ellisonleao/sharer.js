@@ -286,6 +286,20 @@
                             linknote: this.getValue('description'),
                             type: 'page'
                         }
+                    },
+                    evernote: {
+                        shareUrl: 'http://www.evernote.com/clip.action',
+                        params: {
+                            url: this.getValue('url'),
+                            title: this.getValue('title')
+                        }
+                    },
+                    skype: {
+                        shareUrl: 'https://web.skype.com/share',
+                        params: {
+                            url: this.getValue('url'),
+                            title: this.getValue('title')
+                        }
                     }
                 },
                 s = sharers[sharer];
