@@ -111,9 +111,11 @@
                         isLink: true
                     },
                     telegram: {
-                        shareUrl: 'tg://msg_url',
+                        shareUrl: 'https://telegram.me/share/url',
                         params: {
-                            text: this.getValue('title') + ' ' + this.getValue('url')
+                            text: this.getValue('title'),
+                            url: this.getValue('url'),
+                            to: this.getValue('to')
                         },
                         isLink: true
                     },
