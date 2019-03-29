@@ -102,6 +102,8 @@
                 <li><a href="#blogger">Blogger</a></li>
                 <li><a href="#baidu">Baidu</a></li>
                 <li><a href="#okru">Ok.ru</a></li>
+                <li><a href="#evernote">Evernote</a></li>
+                <li><a href="#skype">Skype</a></li>
             </ul>
             <br/>
             <br/>
@@ -241,13 +243,14 @@ $(elem).on('click', function() {
                 <ul>
                     <li><code>data-title</code></li>
                     <li><code>data-url</code></li>
+                    <li><code>data-to</code> (Phone number)</li>
                 </ul>
 
-                <pre><code class="language-markup">&lt;button class="button" data-sharer="telegram" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Telegram&lt;/button&gt;</code></pre>
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="telegram" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/" data-to="+44555-5555"&gt;Share on Telegram&lt;/button&gt;</code></pre>
 
                 <p>Example:</p>
 
-                <button class="button" data-sharer="telegram" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Telegram</button>
+                <button class="button" data-sharer="telegram" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/" data-to="+555555555">Share on Telegram</button>
             </div>
 
             <div class="component">
@@ -640,6 +643,44 @@ $(elem).on('click', function() {
                 <button class="button" data-sharer="okru" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!">Share on Ok.ru</button>
             </div>
 
+            <div class="component">
+                <h2>
+		    <a id="evernote" class="anchor" href="#evernote" ></a>Evernote
+                </h2>
+
+                <p>Available Data attributes:</p>
+
+                <ul>
+                    <li><code>data-url</code></li>
+                    <li><code>data-title</code></li>
+                </ul>
+
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="evernote" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!"&gt;Share on Evernote&lt;/button&gt;</code></pre>
+
+                <p>Example:</p>
+
+                <button class="button" data-sharer="evernote" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!">Share on Evernote</button>
+            </div>
+
+            <div class="component">
+                <h2>
+		    <a id="skype" class="anchor" href="#skype" ></a>Skype
+                </h2>
+
+                <p>Available Data attributes:</p>
+
+                <ul>
+                    <li><code>data-url</code></li>
+                    <li><code>data-title</code></li>
+                </ul>
+
+                <pre><code class="language-markup">&lt;button class="button" data-sharer="skype" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!"&gt;Share on skype&lt;/button&gt;</code></pre>
+
+                <p>Example:</p>
+
+                <button class="button" data-sharer="skype" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!">Share on skype</button>
+            </div>
+
 
             <footer class="site-footer">
                 <span class="site-footer-owner"><a href="https://github.com/ellisonleao/sharer.js">Sharer.js</a> is maintained by <a href="https://github.com/ellisonleao">ellisonleao</a>.</span>
@@ -647,7 +688,7 @@ $(elem).on('click', function() {
             </footer>
 
         </section>
-        <script src="https://cdn.jsdelivr.net/npm/sharer.js@0.3.6/sharer.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sharer.js@0.3.7/sharer.min.js"></script>
         <script src="js/prism.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
