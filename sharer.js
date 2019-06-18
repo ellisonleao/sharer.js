@@ -208,11 +208,17 @@
                             url: this.getValue('url')
                         }
                     },
-                    stumbleupon: {
+                    stumbleupon: {	// Usage deprecated, leaving for backwards compatibility.
                         shareUrl: 'http://www.stumbleupon.com/submit',
                         params: {
                             url: this.getValue('url'),
                             title: this.getValue('title')
+                        }
+                    },
+                    mix: {
+                        shareUrl: 'https://mix.com/add',
+                        params: {
+                            url: this.getValue('url')
                         }
                     },
                     flipboard: {
