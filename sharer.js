@@ -370,8 +370,11 @@
         document.addEventListener('DOMContentLoaded', Sharer.init);
     }
 
-    // turbolinks compatibility
+    // turbolinks 3 compatibility
     window.addEventListener('page:load', Sharer.init);
+    
+    // turbolinks 5 compatibility
+    window.addEventListener('turbolinks:load', Sharer.init);
 
     // exporting sharer for external usage
     window.Sharer = Sharer;
