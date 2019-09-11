@@ -58,7 +58,8 @@ a {
   text-align: center;
   background-color: #ccc;
   background-image: url('../img/bg.jpg');
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 @media screen and (min-width: 64em) {
