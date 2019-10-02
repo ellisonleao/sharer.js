@@ -308,6 +308,13 @@
                             url: this.getValue('url'),
                             title: this.getValue('title')
                         }
+                    },
+                    quora: {
+                      shareUrl: 'https://www.quora.com/share',
+                      params: {
+                        url: this.getValue('url'),
+                        title: this.getValue('title')
+                      }
                     }
                 },
                 s = sharers[sharer];
@@ -372,7 +379,7 @@
 
     // turbolinks 3 compatibility
     window.addEventListener('page:load', Sharer.init);
-    
+
     // turbolinks 5 compatibility
     window.addEventListener('turbolinks:load', Sharer.init);
 
