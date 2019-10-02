@@ -309,6 +309,13 @@
                             title: this.getValue('title')
                         }
                     },
+                    quora: {
+                      shareUrl: 'https://www.quora.com/share',
+                      params: {
+                        url: this.getValue('url'),
+                        title: this.getValue('title')
+                      }
+                    },
                     delicious: {
                         shareUrl: 'https://del.icio.us/post',
                         params: {
@@ -458,10 +465,10 @@
 
     // turbolinks 3 compatibility
     window.addEventListener('page:load', Sharer.init);
-    
-    // turbolinks 5 compatibility
-    window.addEventListener('turbolinks:load', Sharer.init);
 
+    // turbolinks 5 compatibility
+    window.addEventListener('turbolinks:load', Sharer.init)
+  
     // exporting sharer for external usage
     window.Sharer = Sharer;
 })(window, document);
