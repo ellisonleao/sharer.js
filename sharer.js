@@ -308,6 +308,13 @@
                             url: this.getValue('url'),
                             title: this.getValue('title')
                         }
+                    },
+                    delicious: {
+                        shareUrl: 'https://del.icio.us/post',
+                        params: {
+                            url: this.getValue('url'),
+                            title: this.getValue('title')
+                        }
                     }
                 },
                 s = sharers[sharer];
