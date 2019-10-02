@@ -308,6 +308,85 @@
                             url: this.getValue('url'),
                             title: this.getValue('title')
                         }
+                    },
+                    sms: {
+                        shareUrl: 'sms://',
+                        params: {
+                            body: this.getValue('body')
+                        }
+                    },
+                    messenger: {
+                        shareUrl: 'http://www.facebook.com/dialog/send',
+                        params: {
+                            link: this.getValue('url')
+                        }
+                    },
+                    odnoklassniki: {
+                        shareUrl: 'https://connect.ok.ru/dk',
+                        params: {
+                            st: {
+                                cmd: 'WidgetSharePreview',
+                                deprecated: 1,
+                                shareUrl: this.getValue('url')
+                            }
+                        }
+                    },
+                    meneame: {
+                        shareUrl: 'https://www.meneame.net/submit',
+                        params: {
+                            url: this.getValue('url')
+                        }
+                    },
+                    diaspora: {
+                        shareUrl: 'https://share.diasporafoundation.org',
+                        params: {
+                            title: this.getValue('title'),
+                            url: this.getValue('url')
+                        }
+                    },
+                    googlebookmarks: {
+                        shareUrl: 'https://www.google.com/bookmarks/mark',
+                        params: {
+                            op: 'edit',
+                            bkmk: this.getValue('url'),
+                            title: this.getValue('title')
+                        }
+                    },
+                    qzone: {
+                        shareUrl: 'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey',
+                        params: {
+                            url: this.getValue('url')
+                        }
+                    },
+                    refind: {
+                        shareUrl: 'https://refind.com',
+                        params: {
+                            url: this.getValue('url')
+                        }
+                    },
+                    surfingbird: {
+                        shareUrl: 'https://surfingbird.ru/share',
+                        params: {
+                            url: this.getValue('url'),
+                            title: this.getValue('title'),
+                            description: this.getValue('description')
+                        }
+                    },
+                    yahoomail: {
+                        shareUrl: 'http://compose.mail.yahoo.com',
+                        params: {
+                            to: this.getValue('to'),
+                            subject: this.getValue('subject'),
+                            body: this.getValue('body')
+                        }
+                    },
+                    wordpress: {
+                        shareUrl: 'https://wordpress.com/wp-admin/press-this.php',
+                        params: {
+                            u: this.getValue('url'),
+                            t: this.getValue('title'),
+                            s: this.getValue('title')
+                        }
                     }
                 },
                 s = sharers[sharer];
