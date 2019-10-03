@@ -329,6 +329,15 @@
                             body: this.getValue('body')
                         }
                     },
+                    trello: {
+                        shareUrl: 'https://trello.com/add-card',
+                        params: {
+                            url: this.getValue('url'),
+                            name: this.getValue('title'),
+                            desc: this.getValue('description'),
+                            mode: 'popup'
+                        }
+                    },
                     messenger: {
                         shareUrl: 'http://www.facebook.com/dialog/send',
                         params: {
