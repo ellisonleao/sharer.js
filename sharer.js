@@ -215,6 +215,13 @@
                             title: this.getValue('title')
                         }
                     },
+                    mashable: {
+                        shareUrl: 'https://mashable.com/submit',
+                        params: {
+                            url: this.getValue('url'),
+                            title: this.getValue('title')
+                        }
+                    },
                     mix: {
                         shareUrl: 'https://mix.com/add',
                         params: {
