@@ -417,6 +417,21 @@
                             t: this.getValue('title'),
                             s: this.getValue('title')
                         }
+                    },
+                    amazon: {
+                        shareUrl: 'https://www.amazon.com/gp/wishlist/static-add',
+                        params: {
+                            u: this.getValue('url'),
+                            t: this.getValue('title')
+                        }
+                    },
+                    pinboard: {
+                        shareUrl: 'https://pinboard.in/add',
+                        params: {
+                            url: this.getValue('url'),
+                            title: this.getValue('title'),
+                            description: this.getValue('description')
+                        }
                     }
                 },
                 s = sharers[sharer];
@@ -484,7 +499,7 @@
 
     // turbolinks 5 compatibility
     window.addEventListener('turbolinks:load', Sharer.init)
-  
+
     // exporting sharer for external usage
     window.Sharer = Sharer;
 })(window, document);
