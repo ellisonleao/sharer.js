@@ -6,11 +6,11 @@ Sharer.js
 [![](https://github.com/ellisonleao/sharer.js/workflows/build/badge.svg)](https://github.com/ellisonleao/sharer.js/actions)
 [![](https://data.jsdelivr.com/v1/package/npm/sharer.js/badge)](https://www.jsdelivr.com/package/npm/sharer.js)
 
-Sharer.js is a very tiny js lib to create custom social share components on DOM elements for your website. No dependencies.
+Sharer.js is a very tiny JS library to create custom social share components on DOM elements for your website. No dependencies.
 
 ## AMD CommonJS Support
 
-Currently there is no support for AMD/CommonJS right now, but there is a repo which exposes the current Sharer class behaviour.
+Currently there is no support for AMD/CommonJS right now, but there is a repository which exposes the current Sharer class behaviour.
 
 Please checkout https://github.com/okmttdhr/sharer.npm.js
 
