@@ -1,7 +1,7 @@
 Contributing to sharer.js
 =========================
 
-It's so nice you want to contribute with our lib! But we still need to keep some rules in order to make the development on sync.
+It's so nice you want to contribute to our library! But we still need to keep some rules in order to make the development on sync.
 
 A good development cycle can be described as the following:
 
@@ -21,13 +21,13 @@ git checkout -b my-awesome-feature
 
 - Make the code changes like there will be no tomorrow.
 
-- Make sure no lint errors are raised
+- Make sure no lint errors are raised.
 
 ```
 npm test
 ```
 
-- Open pull request
+- Open pull request.
 
 - Wait for our feedback!
 
