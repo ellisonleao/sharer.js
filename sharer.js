@@ -317,11 +317,11 @@
                         }
                     },
                     quora: {
-                      shareUrl: 'https://www.quora.com/share',
-                      params: {
-                        url: this.getValue('url'),
-                        title: this.getValue('title')
-                      }
+                        shareUrl: 'https://www.quora.com/share',
+                        params: {
+                            url: this.getValue('url'),
+                            title: this.getValue('title')
+                        }
                     },
                     delicious: {
                         shareUrl: 'https://del.icio.us/post',
@@ -432,7 +432,14 @@
                             title: this.getValue('title'),
                             description: this.getValue('description')
                         }
-                    }
+                    },
+                    threema: {
+                        shareUrl: 'threema://compose',
+                        params: {
+                            text: this.getValue('text'),
+                            id: this.getValue('id')
+                        }
+                    },
                 },
                 s = sharers[sharer];
 
@@ -498,7 +505,7 @@
     window.addEventListener('page:load', Sharer.init);
 
     // turbolinks 5 compatibility
-    window.addEventListener('turbolinks:load', Sharer.init)
+    window.addEventListener('turbolinks:load', Sharer.init);
 
     // exporting sharer for external usage
     window.Sharer = Sharer;
