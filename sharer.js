@@ -432,7 +432,14 @@
                             title: this.getValue('title'),
                             description: this.getValue('description')
                         }
-                    }
+                    },
+                    threema: {
+                        shareUrl: 'threema://compose',
+                        params: {
+                            text: this.getValue('text'),
+                            id: this.getValue('id')
+                        }
+                    },
                 },
                 s = sharers[sharer];
 
