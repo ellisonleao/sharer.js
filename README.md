@@ -8,6 +8,19 @@ Sharer.js
 
 Sharer.js is a very tiny JS library to create custom social share components on DOM elements for your website. No dependencies.
 
+## 添加了QQ分享，及优化了QQ空间参数
+如何使用QQ分享
+```html
+<a data-sharer="qq" data-pics="pics" data-title="title" data-desc="description"></a>
+
+```
+如何使用QQ空间分享
+```html
+<a data-sharer="qzone" data-pics="pics" data-title="title" data-desc="description"></a>
+```
+
+参考 [demo](https://136cc.com/p/whats-new-in-c8-index-range)
+
 ## AMD CommonJS Support
 
 Currently there is no support for AMD/CommonJS right now, but there is a repository which exposes the current Sharer class behaviour.
