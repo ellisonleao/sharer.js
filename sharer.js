@@ -385,7 +385,19 @@
                     qzone: {
                         shareUrl: 'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey',
                         params: {
-                            url: this.getValue('url')
+                            url: this.getValue('url'),
+                            title:this.getValue('title'),
+                            desc:this.getValue('desc'),
+                            pics:this.getValue('pics')
+                        }
+                    },
+                    qq:{
+                        shareUrl: 'http://connect.qq.com/widget/shareqq/index.html',
+                        params: {
+                            url: this.getValue('url'),
+                            title:this.getValue('title'),
+                            desc:this.getValue('desc'),
+                            pics:this.getValue('pics')
                         }
                     },
                     refind: {
