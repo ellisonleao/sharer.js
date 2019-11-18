@@ -346,7 +346,7 @@
                         }
                     },
                     messenger: {
-                        shareUrl: 'http://www.facebook.com/dialog/send',
+                        shareUrl: 'fb-messenger://share',
                         params: {
                             link: this.getValue('url')
                         }
