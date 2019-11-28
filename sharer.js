@@ -441,7 +441,7 @@
             }
           },
           kakaostory: {
-            shareUrl: 'https://story.kakao.com/share?url=',
+            shareUrl: 'https://story.kakao.com/share',
             params: {
               url: this.getValue('url'),
             }
