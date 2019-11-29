@@ -12,17 +12,17 @@
 (function(window, document) {
     'use strict';
     /**
-     * @constructor
-     */
+   * @constructor
+   */
     var Sharer = function(elem) {
         this.elem = elem;
     };
 
     /**
-     *  @function init
-     *  @description bind the events for multiple sharer elements
-     *  @returns {Empty}
-     */
+   *  @function init
+   *  @description bind the events for multiple sharer elements
+   *  @returns {Empty}
+   */
     Sharer.init = function() {
         var elems = document.querySelectorAll('[data-sharer]'),
             i,
@@ -34,10 +34,10 @@
     };
 
     /**
-     *  @function add
-     *  @description bind the share event for a single dom element
-     *  @returns {Empty}
-     */
+   *  @function add
+   *  @description bind the share event for a single dom element
+   *  @returns {Empty}
+   */
     Sharer.add = function(elem) {
         var target = elem.currentTarget || elem.srcElement;
         var sharer = new Sharer(target);
@@ -48,11 +48,11 @@
     Sharer.prototype = {
         constructor: Sharer,
         /**
-         *  @function getValue
-         *  @description Helper to get the attribute of a DOM element
-         *  @param {String} attr DOM element attribute
-         *  @returns {String|Empty} returns the attr value or empty string
-         */
+     *  @function getValue
+     *  @description Helper to get the attribute of a DOM element
+     *  @param {String} attr DOM element attribute
+     *  @returns {String|Empty} returns the attr value or empty string
+     */
         getValue: function(attr) {
             var val = this.elem.getAttribute('data-' + attr);
             // handing facebook hashtag attribute
@@ -65,10 +65,10 @@
         },
 
         /**
-         * @event share
-         * @description Main share event. Will pop a window or redirect to a link
-         * based on the data-sharer attribute.
-         */
+     * @event share
+     * @description Main share event. Will pop a window or redirect to a link
+     * based on the data-sharer attribute.
+     */
         share: function() {
             var sharer = this.getValue('sharer').toLowerCase(),
                 sharers = {
@@ -127,7 +127,8 @@
                         isLink: true
                     },
                     line: {
-                        shareUrl: 'http://line.me/R/msg/text/?' + encodeURIComponent(this.getValue('title') + ' ' + this.getValue('url')),
+                        shareUrl:
+              'http://line.me/R/msg/text/?' + encodeURIComponent(this.getValue('title') + ' ' + this.getValue('url')),
                         isLink: true
                     },
                     pinterest: {
@@ -158,9 +159,7 @@
                     },
                     reddit: {
                         shareUrl: 'https://www.reddit.com/submit',
-                        params: {
-                            url: this.getValue('url')
-                        }
+                        params: { url: this.getValue('url') }
                     },
                     vk: {
                         shareUrl: 'http://vk.com/share.php',
@@ -458,9 +457,9 @@
             return s !== undefined ? this.urlSharer(s) : false;
         },
         /**
-         * @event urlSharer
-         * @param {Object} sharer
-         */
+     * @event urlSharer
+     * @param {Object} sharer
+     */
         urlSharer: function(sharer) {
             var p = sharer.params || {},
                 keys = Object.keys(p),
