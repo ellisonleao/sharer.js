@@ -439,6 +439,12 @@
               text: this.getValue('text'),
               id: this.getValue('id')
             }
+          },
+          kakaostory: {
+            shareUrl: 'https://story.kakao.com/share',
+            params: {
+              url: this.getValue('url')
+            }
           }
         },
         s = sharers[sharer];
