@@ -8,12 +8,6 @@ Sharer.js
 
 Sharer.js is a very tiny JS library to create custom social share components on DOM elements for your website. No dependencies.
 
-## AMD CommonJS Support
-
-Currently there is no support for AMD/CommonJS right now, but there is a repository which exposes the current Sharer class behaviour.
-
-Please checkout https://github.com/okmttdhr/sharer.npm.js
-
 ## License
 
 GPLv3
