@@ -53,6 +53,7 @@
   "homepage": "https://ellisonleao.github.io/sharer.js/",
   "devDependencies": {
     "eslint": "^5.14.1",
-    "uglify-js": "^3.3.21"
+    "uglify-js": "^3.3.21",
+    "minimist": ">=0.2.1"
   }
 }
