@@ -303,7 +303,7 @@
                         }
                     },
                     evernote: {
-                        shareUrl: 'http://www.evernote.com/clip.action',
+                        shareUrl: 'https://www.evernote.com/clip.action',
                         params: {
                             url: this.getValue('url'),
                             title: this.getValue('title')
