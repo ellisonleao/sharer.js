@@ -280,9 +280,10 @@
                     douban: {
                         shareUrl: 'https://www.douban.com/share/service',
                         params: {
-                            name: this.getValue('title'),
+                            name: this.getValue('name'),
                             href: this.getValue('url'),
-                            image: this.getValue('image')
+                            image: this.getValue('image'),
+                            comment: this.getValue('description')
                         }
                     },
                     okru: {
