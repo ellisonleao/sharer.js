@@ -114,8 +114,7 @@
                         shareUrl: this.getValue('web') !== null ? 'https://telegram.me/share' : 'tg://msg_url',
                         params: {
                             text: this.getValue('title'),
-                            url: this.getValue('url'),
-                            to: this.getValue('to')
+                            url: this.getValue('url')
                         },
                         isLink: true
                     },
