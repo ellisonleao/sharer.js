@@ -9,7 +9,7 @@
  *
  */
 
-(function(window, document) {
+;(function(window, document) {
     'use strict';
     /**
    * @constructor
@@ -197,12 +197,6 @@
                     },
                     pocket: {
                         shareUrl: 'https://getpocket.com/save',
-                        params: {
-                            url: this.getValue('url')
-                        }
-                    },
-                    digg: {
-                        shareUrl: 'http://www.digg.com/submit',
                         params: {
                             url: this.getValue('url')
                         }
@@ -499,12 +493,6 @@
     } else {
         document.addEventListener('DOMContentLoaded', Sharer.init);
     }
-
-    // turbolinks 3 compatibility
-    window.addEventListener('page:load', Sharer.init);
-
-    // turbolinks 5 compatibility
-    window.addEventListener('turbolinks:load', Sharer.init);
 
     // exporting sharer for external usage
     window.Sharer = Sharer;
