@@ -439,7 +439,15 @@
                         params: {
                             url: this.getValue('url')
                         }
-                    }
+                    },
+                    yummly: {
+                        shareUrl: 'http://www.yummly.com/urb/verify',
+                        params: {
+                            url: this.getValue('url'),
+                            title: this.getValue('title'),
+                            yumtype: 'button'
+                        }
+                    }                    
                 },
                 s = sharers[sharer];
 
