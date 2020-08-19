@@ -1,0 +1,192 @@
+button {
+  background-color: #aaa;
+  border: none;
+  border-radius: 24px;
+  box-shadow: 0 2px 0 #888, 1px 4px 2px rgba(0,0,0,0.2);
+  color: white;
+  display: block;
+  font-family: sans-serif;
+  font-size: .85em;
+  font-weight: 300;
+  outline: none;
+  padding: 1em 0;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  width: 100%;
+}
+
+button[data-sharer="twitter"] {
+  background-color: #00aced;
+  box-shadow: 0 2px 0 #0084b4, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="facebook"] {
+  background-color: #3b5998;
+  box-shadow: 0 2px 0 #224389, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="linkedin"] {
+  background-color: #007AB5;
+  box-shadow: 0 2px 0 #005E8C, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="googleplus"] {
+  background-color: #DD4C39;
+  box-shadow: 0 2px 0 #BB2D1A, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="email"] {
+  background-color: #444;
+  box-shadow: 0 2px 0 #222, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="whatsapp"] {
+  background-color: #4DC247;
+  box-shadow: 0 2px 0 #30AF29, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="telegram"] {
+  background-color: #34ADE1;
+  box-shadow: 0 2px 0 #0E9BD8, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="viber"] {
+  background-color: #7C529E;
+  box-shadow: 0 2px 0 #5F3485, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="pinterest"] {
+  background-color: #CB2029;
+  box-shadow: 0 2px 0 #A30E15, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="tumblr"] {
+  background-color: #32506d;
+  box-shadow: 0 2px 0 #1F3C59, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="hackernews"] {
+  background-color: #FF6700;
+  box-shadow: 0 2px 0 #C65000, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="reddit"] {
+  background-color: #CEE3F8;
+  box-shadow: 0 2px 0 #A2C6E8, 1px 4px 2px rgba(0,0,0,0.2);
+  color: #335f89;
+}
+button[data-sharer="vk"] {
+  background-color: #45668E;
+  box-shadow: 0 2px 0 #2B4E77, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="buffer"] {
+  background-color: #46ABED;
+  box-shadow: 0 2px 0 #2198E5, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="xing"] {
+  background-color: #006464;
+  box-shadow: 0 2px 0 #135353, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="line"] {
+  background-color: #1DCD00;
+  box-shadow: 0 2px 0 #1DCD00, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="digg"] {
+  background-color: #1B568E;
+  box-shadow: 0 2px 0 #1B568E, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="pocket"] {
+  background-color: #EE4056;
+  box-shadow: 0 2px 0 #EE4056, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="stumbleupon"] {
+  background-color: #EB4924;
+  box-shadow: 0 2px 0 #EB4924, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="flipboard"] {
+  background-color: #E02828;
+  box-shadow: 0 2px 0 #E02828, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="weibo"] {
+  background-color: #E6162D;
+  box-shadow: 0 2px 0 #E6162D, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="renren"] {
+  background-color: #005EAC;
+  box-shadow: 0 2px 0 #005EAC, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="myspace"] {
+  background-color: #111;
+  box-shadow: 0 2px 0 #111, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="blogger"] {
+  background-color: #EB8104;
+  box-shadow: 0 2px 0 #EB8104, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="baidu"] {
+  background-color: #2319DC;
+  box-shadow: 0 2px 0 #2319DC, 1px 4px 2px rgba(0,0,0,0.2);
+}
+button[data-sharer="okru"] {
+  background-color: #EE8208;
+  box-shadow: 0 2px 0 #EE8208, 1px 4px 2px rgba(0,0,0,0.2);
+}
+
+button[data-sharer="trello"] {
+  background-color: #00aced;
+  box-shadow: 0 2px 0 #0084b4, 1px 4px 2px rgba(0,0,0,0.2);
+}
+
+button:active {
+  box-shadow: 0 0 0 transparent;
+  transform: translateY(2px);
+}
+
+button:hover {
+	text-decoration: none;
+	transition: all .2s ease-in-out;
+	transform: scale(1.1);
+}
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  color: #2c3e50;
+}
+
+.component {
+	margin-bottom: 80px;
+	background: #f9f9f9;
+	padding: 50px;
+	border-radius: 20px;
+	box-shadow: 1px 1px 30px #cecece;
+}
+
+.license {
+	display: inline-block;
+	text-align: center;
+	width: 300px;
+    background: #f9f9f9;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 30px #cecece;
+	margin-left: 60px;
+	margin-bottom: 20px;
+}
+
+.license-extended {
+	background: #5bb6ef;
+}
+
+.license a {
+	text-decoration: none;
+}
+
+.license .name {
+	display: block;
+	color: #000;
+}
+
+.license .price {
+	display: block;
+	font-size: 3em;
+	color: #000;
+}
+
+@media (max-width: 840px) {
+	.license {
+		margin-top: 20px;
+		margin-left: 0;
+	}
+}
