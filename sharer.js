@@ -9,7 +9,7 @@
  *
  */
 
-;(function(window, document) {
+(function(window, document) {
     'use strict';
     /**
    * @constructor
@@ -447,7 +447,7 @@
                             title: this.getValue('title'),
                             yumtype: 'button'
                         }
-                    }                    
+                    }
                 },
                 s = sharers[sharer];
 

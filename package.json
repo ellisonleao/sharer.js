@@ -47,7 +47,7 @@
     "url": "https://github.com/ellisonleao/sharer.js/issues"
   },
   "scripts": {
-    "test": "eslint sharer.js",
+    "test": "eslint --fix sharer.js",
     "compress": "uglifyjs sharer.js --mangle > sharer.min.js"
   },
   "homepage": "https://ellisonleao.github.io/sharer.js/",
