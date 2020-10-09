@@ -104,7 +104,7 @@
                         isLink: true
                     },
                     whatsapp: {
-                        shareUrl: this.getValue('web') !== null ? 'https://api.whatsapp.com/send' : 'whatsapp://send',
+                        shareUrl: this.getValue('web') !== null ? 'https://api.whatsapp.com/send' : 'https://wa.me/',
                         params: {
                             text: this.getValue('title') + ' ' + this.getValue('url')
                         },
