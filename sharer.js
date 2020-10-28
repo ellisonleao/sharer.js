@@ -170,11 +170,9 @@
                         }
                     },
                     xing: {
-                        shareUrl: 'https://www.xing.com/app/user',
+                        shareUrl: 'https://www.xing.com/social/share/spi',
                         params: {
-                            op: 'share',
-                            url: this.getValue('url'),
-                            title: this.getValue('title')
+                            url: this.getValue('url')
                         }
                     },
                     buffer: {
