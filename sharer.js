@@ -77,6 +77,7 @@
             params: {
               u: this.getValue('url'),
               hashtag: this.getValue('hashtag'),
+              quote: this.getValue('quote')
             },
           },
           linkedin: {
