@@ -77,7 +77,7 @@
             params: {
               u: this.getValue('url'),
               hashtag: this.getValue('hashtag'),
-              quote: this.getValue('quote')
+              quote: this.getValue('quote'),
             },
           },
           linkedin: {
@@ -304,13 +304,6 @@
           },
           skype: {
             shareUrl: 'https://web.skype.com/share',
-            params: {
-              url: this.getValue('url'),
-              title: this.getValue('title'),
-            },
-          },
-          quora: {
-            shareUrl: 'https://www.quora.com/share',
             params: {
               url: this.getValue('url'),
               title: this.getValue('title'),
