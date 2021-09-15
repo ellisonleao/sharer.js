@@ -3,7 +3,7 @@
  * Sharer.js
  *
  * @description Create your own social share buttons
- * @version 0.4.1
+ * @version 0.4.2
  * @author Ellison Leao <ellisonleao@gmail.com>
  * @license GPLv3
  *
