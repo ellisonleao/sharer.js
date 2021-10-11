@@ -52,7 +52,7 @@
   },
   "homepage": "https://ellisonleao.github.io/sharer.js/",
   "devDependencies": {
-    "eslint": "^7.4.0",
+    "eslint": "^8.0.0",
     "uglify-js": "^3.3.21",
     "minimist": ">=0.2.1"
   }
