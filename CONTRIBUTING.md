@@ -1,5 +1,4 @@
-Contributing to sharer.js
-=========================
+# Contributing to sharer.js
 
 It's so nice you want to contribute to our library! But we still need to keep some rules in order to make the development on sync.
 
@@ -24,12 +23,11 @@ git checkout -b my-awesome-feature
 - Make sure no lint errors are raised.
 
 ```
-npm test
+npm lint
 ```
 
 - Open pull request.
 
 - Wait for our feedback!
-
 
 That's it!

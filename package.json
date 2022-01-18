@@ -44,13 +44,13 @@
     "url": "https://github.com/ellisonleao/sharer.js/issues"
   },
   "scripts": {
-    "test": "eslint --fix sharer.js",
+    "lint": "npx prettier -w sharer.js",
     "compress": "uglifyjs sharer.js --mangle > sharer.min.js"
   },
   "homepage": "https://ellisonleao.github.io/sharer.js/",
   "devDependencies": {
-    "eslint": "^8.0.0",
-    "uglify-js": "^3.3.21",
-    "minimist": ">=0.2.1"
+    "minimist": ">=0.2.1",
+    "prettier": "2.5.1",
+    "uglify-js": "^3.3.21"
   }
 }
