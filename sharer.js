@@ -195,14 +195,6 @@
               url: this.getValue('url'),
             },
           },
-          stumbleupon: {
-            // Usage deprecated, leaving for backwards compatibility.
-            shareUrl: 'http://www.stumbleupon.com/submit',
-            params: {
-              url: this.getValue('url'),
-              title: this.getValue('title'),
-            },
-          },
           mashable: {
             shareUrl: 'https://mashable.com/submit',
             params: {
@@ -234,20 +226,6 @@
               appkey: this.getValue('appkey'),
               ralateUid: this.getValue('ralateuid'),
               language: 'zh_cn',
-            },
-          },
-          renren: {
-            shareUrl: 'http://share.renren.com/share/buttonshare',
-            params: {
-              link: this.getValue('url'),
-            },
-          },
-          myspace: {
-            shareUrl: 'https://myspace.com/post',
-            params: {
-              u: this.getValue('url'),
-              t: this.getValue('title'),
-              c: this.getValue('description'),
             },
           },
           blogger: {
