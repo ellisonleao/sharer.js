@@ -155,7 +155,7 @@
           },
           reddit: {
             shareUrl: 'https://www.reddit.com/submit',
-            params: { url: this.getValue('url') },
+            params: { url: this.getValue('url'), title: this.getValue('title') },
           },
           vk: {
             shareUrl: 'http://vk.com/share.php',
