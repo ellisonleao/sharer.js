@@ -1,6 +1,6 @@
 {
   "name": "sharer.js",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "Create your own social share buttons. No Jquery.",
   "main": "sharer.js",
   "repository": {
@@ -25,14 +25,11 @@
     "reddit",
     "instapaper",
     "pocket",
-    "stumbleupon",
     "digg",
     "mashable",
     "flipboard",
     "weibo",
-    "renren",
     "blogger",
-    "myspace",
     "baidu",
     "okru",
     "mailru",
