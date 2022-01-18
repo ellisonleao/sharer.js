@@ -61,7 +61,7 @@
           val = '#' + val;
         }
       }
-      return val;
+      return val === null ? '' : val;
     },
 
     /**
@@ -97,39 +97,35 @@
             },
           },
           email: {
-            shareUrl: 'mailto:' + this.getValue('to') || '',
+            shareUrl: 'mailto:' + this.getValue('to'),
             params: {
               subject: this.getValue('subject'),
               body: this.getValue('title') + '\n' + this.getValue('url'),
             },
-            isLink: true,
           },
           whatsapp: {
-            shareUrl: this.getValue('web') !== null ? 'https://api.whatsapp.com/send' : 'https://wa.me/',
+            shareUrl: this.getValue('web') === 'true' ? 'https://web.whatsapp.com/send' : 'https://api.whatsapp.com/',
             params: {
+              phone: this.getValue('to'),
               text: this.getValue('title') + ' ' + this.getValue('url'),
             },
-            isLink: true,
           },
           telegram: {
-            shareUrl: this.getValue('web') !== null ? 'https://telegram.me/share' : 'tg://msg_url',
+            shareUrl: 'https://t.me/share',
             params: {
               text: this.getValue('title'),
               url: this.getValue('url'),
             },
-            isLink: true,
           },
           viber: {
             shareUrl: 'viber://forward',
             params: {
               text: this.getValue('title') + ' ' + this.getValue('url'),
             },
-            isLink: true,
           },
           line: {
             shareUrl:
               'http://line.me/R/msg/text/?' + encodeURIComponent(this.getValue('title') + ' ' + this.getValue('url')),
-            isLink: true,
           },
           pinterest: {
             shareUrl: 'https://www.pinterest.com/pin/create/button/',
@@ -469,7 +465,18 @@
       }
       sharer.shareUrl += str;
 
-      if (!sharer.isLink) {
+      var isLink = this.getValue('link') === 'true';
+      var isBlank = this.getValue('blank') === 'true';
+
+      if (isLink) {
+        if (isBlank) {
+          window.open(sharer.shareUrl, '_blank');
+        } else {
+          window.location.href = sharer.shareUrl;
+        }
+      } else {
+        console.log(sharer.shareUrl);
+        // defaults to popup if no data-link is provided
         var popWidth = sharer.width || 600,
           popHeight = sharer.height || 480,
           left = window.innerWidth / 2 - popWidth / 2 + window.screenX,
@@ -480,8 +487,6 @@
         if (window.focus) {
           newWindow.focus();
         }
-      } else {
-        window.location.href = sharer.shareUrl;
       }
     },
   };
