@@ -42,7 +42,7 @@
     "trello"
   ],
   "author": "Ellison Leão <ellisonleao@gmail.com>",
-  "license": "GPLv3",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ellisonleao/sharer.js/issues"
   },
