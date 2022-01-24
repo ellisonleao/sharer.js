@@ -3,7 +3,7 @@
  * Sharer.js
  *
  * @description Create your own social share buttons
- * @version 0.5.0
+ * @version 0.5.1
  * @author Ellison Leao <ellisonleao@gmail.com>
  * @license MIT
  *
@@ -104,7 +104,7 @@
             },
           },
           whatsapp: {
-            shareUrl: this.getValue('web') === 'true' ? 'https://web.whatsapp.com/send' : 'https://api.whatsapp.com/',
+            shareUrl: this.getValue('web') === 'true' ? 'https://web.whatsapp.com/send' : 'https://wa.me/',
             params: {
               phone: this.getValue('to'),
               text: this.getValue('title') + ' ' + this.getValue('url'),
