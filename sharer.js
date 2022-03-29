@@ -94,6 +94,8 @@
               url: this.getValue('url'),
               hashtags: this.getValue('hashtags'),
               via: this.getValue('via'),
+              related: this.getValue('related'),
+              in_reply_to: this.getValue('in_reply_to')
             },
           },
           email: {
