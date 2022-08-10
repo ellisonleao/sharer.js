@@ -101,15 +101,17 @@
         <li><a href="#evernote">Evernote</a></li>
         <li><a href="#skype">Skype</a></li>
         <li><a href="#trello">Trello</a></li>
+        <li><a href="#share">Native Share</a></li>
       </ul>
       <br/>
       <br/>
 
       <p>Each sharer component has its own <pre>data-*</pre> attributes. Checkout specific elements below based on each social media site.</p>
-      <p>All sharer objects can accept the following attributes:</p> 
+      <p>All sharer objects can accept the following attributes:</p>
       <ul>
         <li><strong>data-title</strong> - sharer text</li>
-        <li><strong>data-url</strong> - url to be shared</li>
+        <li><strong>data-url</strong> - url to be shared (defaults to current URL)</li>
+        <li><strong>data-params</strong> - additional query parameters to append to the URL (like UTM params)</li>
         <li><strong>data-width</strong> - popup width</li>
         <li><strong>data-height</strong> - popup height</li>
         <li><strong>data-link</strong> - share element will work as a link</li>
@@ -218,7 +220,7 @@ $(elem).on('click', function() {
         </ul>
         <p>Example:</p>
 
-        <button class="button" data-sharer="whatsapp" data-web=true data-link=true data-blank=true data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Whatsapp Web</button>
+        <pre><code class="language-markup">&lt;button class="button" data-sharer="whatsapp" data-web=true data-link=true data-blank=true data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Whatsapp Web&lt;/button&gt;</code></pre>
         <br/>
         <button class="button" data-sharer="whatsapp" data-link=true data-blank=true data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/">Share on Whatsapp</button>
 
@@ -525,6 +527,29 @@ $(elem).on('click', function() {
         <button class="button" data-sharer="trello" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!" data-description="Create social share elements on DOM objects">Share on Trello</button>
       </div>
 
+      <div class="component">
+        <h2>
+          <a id="share" class="anchor" href="#share" ></a>Native Share
+        </h2>
+
+        <p>Uses the built-in sharing functionality available on some devices.</p>
+
+        <p><strong>NOTE:</strong> For devices that do not support this, the share button will be hidden. <br /> See <a href="https://caniuse.com/web-share">browser support</a>.</p>
+
+        <p>Available custom attributes:</p>
+
+        <ul>
+          <li><code>data-title</code> (optional)</li>
+          <li><code>data-description</code> (optional)</li>
+        </ul>
+
+        <pre><code class="language-markup">&lt;button class="button" data-sharer="share" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!" data-description="Create social share elements on DOM objects"&gt;Share&lt;/button&gt;</code></pre>
+
+        <p>Example (hidden on some <a href="https://caniuse.com/web-share">devices/browsers</a>):</p>
+
+        <button class="button" data-sharer="share" data-url="https://ellisonleao.github.io/sharer.js/" data-title="Checkout Sharer.js!" data-description="Create social share elements on DOM objects">Share</button>
+      </div>
+
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/ellisonleao/sharer.js">Sharer.js</a> is maintained by <a href="https://github.com/ellisonleao">ellisonleao</a>.</span>
@@ -532,7 +557,7 @@ $(elem).on('click', function() {
       </footer>
 
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+    <script src="js/sharer.min.js"></script>
     <script src="js/prism.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
