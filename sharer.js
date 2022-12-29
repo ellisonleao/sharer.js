@@ -88,7 +88,7 @@
             },
           },
           twitter: {
-            shareUrl: 'https://twitter.com/intent/tweet/',
+            shareUrl: 'https://twitter.com/intent/tweet',
             params: {
               text: this.getValue('title'),
               url: this.getValue('url'),
