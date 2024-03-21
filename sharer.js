@@ -42,6 +42,7 @@
     var target = elem.currentTarget || elem.srcElement;
     var sharer = new Sharer(target);
     sharer.share();
+    
   };
 
   // instance methods
@@ -416,6 +417,9 @@
               yumtype: 'button',
             },
           },
+          dispora:{
+            shareUrl:'https://share.diasporafoundation.org/?title='+encodeURIComponent(this.getValue('title'))+"&url="+encodeURIComponent(this.getValue('url')),
+          }
         },
         s = sharers[sharer];
 
@@ -455,7 +459,7 @@
           window.location.href = sharer.shareUrl;
         }
       } else {
-        console.log(sharer.shareUrl);
+        console.log(sharer.params);
         // defaults to popup if no data-link is provided
         var popWidth = sharer.width || 600,
           popHeight = sharer.height || 480,
