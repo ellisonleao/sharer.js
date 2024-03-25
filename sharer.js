@@ -416,6 +416,9 @@
               yumtype: 'button',
             },
           },
+          dispora:{
+            shareUrl:'https://share.diasporafoundation.org/?title='+encodeURIComponent(this.getValue('title'))+"&url="+encodeURIComponent(this.getValue('url')),
+          }
         },
         s = sharers[sharer];
 
