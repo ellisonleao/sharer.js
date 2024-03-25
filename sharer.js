@@ -9,12 +9,12 @@
  *
  */
 
-(function (window, document) {
+(function(window, document) {
   'use strict';
   /**
    * @constructor
    */
-  var Sharer = function (elem) {
+  var Sharer = function(elem) {
     this.elem = elem;
   };
 
@@ -23,7 +23,7 @@
    *  @description bind the events for multiple sharer elements
    *  @returns {Empty}
    */
-  Sharer.init = function () {
+  Sharer.init = function() {
     var elems = document.querySelectorAll('[data-sharer]'),
       i,
       l = elems.length;
@@ -38,7 +38,7 @@
    *  @description bind the share event for a single dom element
    *  @returns {Empty}
    */
-  Sharer.add = function (elem) {
+  Sharer.add = function(elem) {
     var target = elem.currentTarget || elem.srcElement;
     var sharer = new Sharer(target);
     sharer.share();
@@ -53,7 +53,7 @@
      *  @param {String} attr DOM element attribute
      *  @returns {String|Empty} returns the attr value or empty string
      */
-    getValue: function (attr) {
+    getValue: function(attr) {
       var val = this.elem.getAttribute('data-' + attr);
       // handing facebook hashtag attribute
       if (val && attr === 'hashtag') {
@@ -69,7 +69,7 @@
      * @description Main share event. Will pop a window or redirect to a link
      * based on the data-sharer attribute.
      */
-    share: function () {
+    share: function() {
       var sharer = this.getValue('sharer').toLowerCase(),
         sharers = {
           facebook: {
@@ -416,9 +416,6 @@
               yumtype: 'button',
             },
           },
-          dispora:{
-            shareUrl:'https://share.diasporafoundation.org/?title='+encodeURIComponent(this.getValue('title'))+"&url="+encodeURIComponent(this.getValue('url')),
-          }
         },
         s = sharers[sharer];
 
@@ -433,7 +430,7 @@
      * @event urlSharer
      * @param {Object} sharer
      */
-    urlSharer: function (sharer) {
+    urlSharer: function(sharer) {
       var p = sharer.params || {},
         keys = Object.keys(p),
         i,
