@@ -76,7 +76,8 @@
       </h2>
 
       <ul>
-        <li><a href="#twitter">Twitter</a></li>
+        <li><a href="#twitter">Twitter/X</a></li>
+        <li><a href="#threads">Threads</a></li>
         <li><a href="#facebook">Facebook</a></li>
         <li><a href="#linkedin">Linkedin</a></li>
         <li><a href="#email">Email</a></li>
@@ -135,7 +136,7 @@ $(elem).on('click', function() {
 
       <div class="component">
         <h2>
-          <a id="twitter" class="anchor" href="#twitter" ></a>Twitter:
+          <a id="twitter" class="anchor" href="#twitter" ></a>Twitter/X:
         </h2>
 
         <p>Available custom attributes:</p>
@@ -145,11 +146,25 @@ $(elem).on('click', function() {
           <li><code>data-hashtags</code> (optional: comma separated hashtags)</li>
         </ul>
         <pre><code class="language-markup">&lt;button class="button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-hashtags="awesome, sharer.js" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Twitter&lt;/button&gt;</code></pre>
+        <pre><code class="language-markup">&lt;button class="button" data-sharer="x" data-title="Checkout Sharer.js!" data-hashtags="awesome, sharer.js" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Twitter&lt;/button&gt;</code></pre>
 
         <p>Example:</p>
 
-        <button class="button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-hashtags="awesome, sharer.js" data-url="https://ellisonleao.github.io/sharer.js/" >Share on Twitter</button>
+        <button class="button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-hashtags="awesome, sharer.js" data-url="https://ellisonleao.github.io/sharer.js/" >Share on Twitter/X</button>
       </div>
+
+      <div class="component">
+        <h2>
+          <a id="threads" class="anchor" href="#threads" ></a>Threads:
+        </h2>
+
+        <pre><code class="language-markup">&lt;button class="button" data-sharer="threads" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/"&gt;Share on Threads&lt;/button&gt;</code></pre>
+
+        <p>Example:</p>
+
+        <button class="button" data-sharer="threads" data-title="Checkout Sharer.js!" data-url="https://ellisonleao.github.io/sharer.js/" data-hashtags="test,test2">Share on Threads</button>
+      </div>
+
 
       <div class="component">
         <h2>

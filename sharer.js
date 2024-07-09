@@ -95,7 +95,24 @@
               hashtags: this.getValue('hashtags'),
               via: this.getValue('via'),
               related: this.getValue('related'),
-              in_reply_to: this.getValue('in_reply_to')
+              in_reply_to: this.getValue('in_reply_to'),
+            },
+          },
+          x: {
+            shareUrl: 'https://x.com/intent/tweet',
+            params: {
+              text: this.getValue('title'),
+              url: this.getValue('url'),
+              hashtags: this.getValue('hashtags'),
+              via: this.getValue('via'),
+              related: this.getValue('related'),
+              in_reply_to: this.getValue('in_reply_to'),
+            },
+          },
+          threads: {
+            shareUrl: 'https://threads.net/intent/post',
+            params: {
+              text: this.getValue('title') + ' ' + this.getValue('url'),
             },
           },
           email: {
