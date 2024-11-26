@@ -53,7 +53,7 @@
   "homepage": "https://ellisonleao.github.io/sharer.js/",
   "devDependencies": {
     "minimist": ">=0.2.1",
-    "prettier": "3.3.3",
+    "prettier": "3.4.0",
     "uglify-js": "^3.3.21"
   }
 }
