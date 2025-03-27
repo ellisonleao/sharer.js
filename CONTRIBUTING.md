@@ -7,7 +7,7 @@ A good development cycle can be described as the following:
 - Clone repo and install dev requirements
 
 ```
-git clone git@github.com:ellisonleao:sharer.js
+git clone git@github.com:ellisonleao/sharer.js.git
 cd sharer.js
 npm install
 ```
@@ -23,7 +23,7 @@ git checkout -b my-awesome-feature
 - Make sure no lint errors are raised.
 
 ```
-npm lint
+npm run lint
 ```
 
 - Open pull request.
