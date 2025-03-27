@@ -20,6 +20,10 @@ button[data-sharer="twitter"] {
   background-color: #00aced;
   box-shadow: 0 2px 0 #0084b4, 1px 4px 2px rgba(0,0,0,0.2);
 }
+button[data-sharer="bluesky"] {
+  background-color: #0085ff;
+  box-shadow: 0 2px 0 #0070e6, 1px 4px 2px rgba(0,0,0,0.2);
+}
 button[data-sharer="facebook"] {
   background-color: #3b5998;
   box-shadow: 0 2px 0 #224389, 1px 4px 2px rgba(0,0,0,0.2);
