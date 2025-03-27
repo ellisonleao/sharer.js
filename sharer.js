@@ -115,6 +115,12 @@
               text: this.getValue('title') + ' ' + this.getValue('url'),
             },
           },
+          bluesky: {
+            shareUrl: 'https://bsky.app/intent/compose',
+            params: {
+              text: this.getValue('title') + ' ' + this.getValue('url'),
+            },
+          },
           email: {
             shareUrl: 'mailto:' + this.getValue('to'),
             params: {
