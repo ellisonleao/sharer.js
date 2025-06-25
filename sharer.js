@@ -478,7 +478,6 @@
           window.location.href = sharer.shareUrl;
         }
       } else {
-        console.log(sharer.shareUrl);
         // defaults to popup if no data-link is provided
         var popWidth = sharer.width || 600,
           popHeight = sharer.height || 480,
