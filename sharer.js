@@ -339,11 +339,9 @@
           odnoklassniki: {
             shareUrl: 'https://connect.ok.ru/dk',
             params: {
-              st: {
-                cmd: 'WidgetSharePreview',
-                deprecated: 1,
-                shareUrl: this.getValue('url'),
-              },
+              'st.cmd': 'WidgetSharePreview',
+              'st.deprecated': 1,
+              'st.shareUrl': this.getValue('url'),
             },
           },
           meneame: {
